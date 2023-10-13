@@ -4,36 +4,49 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-     public float rotationalSpeed = 5.0f;
-    public float thrustForce = 10.0f;
+    public float rotationalSpeed = 0.5f;
+    public float thrustForce = 0.5f;
     public float turboMultiplier = 2.0f;
+    public float brakeForce = 0.5f;
     private Rigidbody2D rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+     
+        rb.gravityScale = 0f;
+   
+        rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
     void Update()
     {
-        // Obtener la entrada del jugador
+      
         float rotationInput = Input.GetAxis("Horizontal");
         float thrustInput = Input.GetAxis("Vertical");
 
-        // Rotación
-        float rotation = -rotationInput * rotationalSpeed; // Negativo para invertir la dirección
+       
+        float rotation = -rotationInput * rotationalSpeed; 
         rb.rotation += rotation;
 
-        // Impulso
         Vector2 thrustDirection = transform.up;
         float thrust = thrustForce * thrustInput;
-        rb.velocity = thrustDirection * thrust;
 
-        // Turbo
+        if (thrustInput < 0)
+        {
+            
+            rb.AddForce(-thrustDirection * brakeForce);
+        }
+        else
+        {
+            rb.AddForce(thrustDirection * thrust);
+        }
+
+       
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            // Si se presiona la barra espaciadora, aumenta el impulso
-            rb.velocity *= turboMultiplier;
+            
+            rb.AddForce(thrustDirection * thrustForce * turboMultiplier, ForceMode2D.Impulse);
         }
     }
 }
