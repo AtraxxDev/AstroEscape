@@ -5,8 +5,51 @@ using UnityEngine;
 public class GRAVITON : MonoBehaviour
 {
     Rigidbody2D rB;
-    public bool IsAttractive;
-    public bool IsAttractee;
+
+    public bool IsAttractee
+    {
+        get
+        {
+            return isAttractee;
+        }
+        set
+        {
+            if (value == true)
+            {
+                if (!PlanetGravity.attractees.Contains(this.GetComponent<Rigidbody2D>()))
+                {
+                    PlanetGravity.attractees.Add(rB);
+                }
+            }
+            else if (value == false)
+            {
+                PlanetGravity.attractees.Remove(rB);
+            }
+            isAttractee = value;
+        }
+    }
+
+    public bool IsAttractive
+    {
+        get
+        {
+            return isAttractive;
+        }
+        set
+        {
+            if (value == true)
+            {
+                if (!PlanetGravity.attractors.Contains(this.GetComponent<Rigidbody2D>()))
+                    PlanetGravity.attractors.Add(rB);
+            }
+            else if (value == false)
+            {
+                PlanetGravity.attractors.Remove(rB);
+            }
+            isAttractive = value;
+        }
+    }
+
     [SerializeField] bool isAttractive;
     [SerializeField] bool isAttractee;
 
@@ -36,12 +79,13 @@ public class GRAVITON : MonoBehaviour
 
     private void OnDisable()
     {
-        GravityHandler.attractors.Remove(rB);
-        GravityHandler.attractees.Remove(rB);
+        PlanetGravity.attractors.Remove(rB);
+        PlanetGravity.attractees.Remove(rB);
     }
 
     void ApplyVelocity(Vector3 velocity)
     {
         rB.AddForce(initialVel, ForceMode2D.Impulse);
     }
+   
 }

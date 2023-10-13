@@ -4,11 +4,30 @@ using UnityEngine;
 
 public class PlanetGravity : MonoBehaviour
 {
-   
-    // Update is called once per frame
-    void Update()
+    [SerializeField] float g = 1f;
+    static float G;
+
+    public static List<Rigidbody2D> attractors = new List<Rigidbody2D>();
+    public static List<Rigidbody2D> attractees = new List<Rigidbody2D>();
+    public static bool isSimulatingLive = true;
+
+    private void FixedUpdate()
     {
-        
+        G = g;
+        if (isSimulatingLive)
+            SimulateGravities();
+    }
+
+    public static void SimulateGravities()
+    {
+        foreach(Rigidbody2D attractor in attractors)
+        {
+            foreach(Rigidbody2D attractee in attractees)
+            {
+                if (attractor != attractee)
+                    AddGravityForce(attractor, attractee);
+            }
+        }
     }
 
     public static void AddGravityForce(Rigidbody2D attractor, Rigidbody2D target)
@@ -27,4 +46,6 @@ public class PlanetGravity : MonoBehaviour
         Vector3 forceVector = forceDirection * forceMagnitude;
         target.AddForce(forceVector);
     }
+
+
 }
