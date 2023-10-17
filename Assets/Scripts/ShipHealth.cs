@@ -8,17 +8,6 @@ public class ShipHealth : MonoBehaviour
 
     public Image healthBar;
     public float healthAmount = 8f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void TakeDamage()
     {
@@ -34,4 +23,12 @@ public class ShipHealth : MonoBehaviour
 
         healthBar.fillAmount = healthAmount / 100f;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("enemy"))
+        {
+            TakeDamage();
+        }
+    }
+
 }
