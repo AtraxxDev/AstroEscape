@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Oxygen : MonoBehaviour
 {
     public Image timer_linear_image;
-    public Image timer_radial_image;
     float time_remaining;
     public float max_time = 120f;
 
@@ -21,7 +20,6 @@ public class Oxygen : MonoBehaviour
         {
             time_remaining -= Time.deltaTime;
             timer_linear_image.fillAmount = time_remaining / max_time;
-            timer_radial_image.fillAmount = time_remaining / max_time;
         }
     }
 }
