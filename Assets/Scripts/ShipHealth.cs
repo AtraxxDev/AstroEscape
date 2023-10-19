@@ -7,7 +7,8 @@ public class ShipHealth : MonoBehaviour
 {
 
     public Image healthBar;
-    public float healthAmount = 8f;
+    public float healthAmount;
+    public float maxHealth = 8f;
 
     public void TakeDamage()
     {
@@ -20,6 +21,10 @@ public class ShipHealth : MonoBehaviour
     {
         healthAmount += healingAmounth;
         healthAmount = Mathf.Clamp(healthAmount,0, 100);
+        if (healthAmount > maxHealth)
+        {
+            healthAmount = maxHealth;
+        }
 
         healthBar.fillAmount = healthAmount / 100f;
     }

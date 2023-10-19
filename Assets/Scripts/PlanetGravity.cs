@@ -7,8 +7,8 @@ public class PlanetGravity : MonoBehaviour
     [SerializeField] float g = 1f;
     static float G;
 
-    public static List<Rigidbody2D> attractors = new List<Rigidbody2D>();
-    public static List<Rigidbody2D> attractees = new List<Rigidbody2D>();
+    public  List<Rigidbody2D> attractors = new List<Rigidbody2D>();
+    public  List<Rigidbody2D> attractees = new List<Rigidbody2D>();
     public static bool isSimulatingLive = true;
 
     private void FixedUpdate()
@@ -18,7 +18,7 @@ public class PlanetGravity : MonoBehaviour
             SimulateGravities();
     }
 
-    public static void SimulateGravities()
+    public void SimulateGravities()
     {
         foreach(Rigidbody2D attractor in attractors)
         {

@@ -17,9 +17,14 @@ public class fuel : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             fuelAmount -= Time.deltaTime;
+            fuelBar.fillAmount = fuelAmount -= Time.deltaTime;
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            fuelAmount -= Time.deltaTime * 2;
             fuelBar.fillAmount = fuelAmount -= Time.deltaTime;
         }
     }
