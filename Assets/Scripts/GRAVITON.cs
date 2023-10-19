@@ -5,6 +5,7 @@ using UnityEngine;
 public class GRAVITON : MonoBehaviour
 {
     Rigidbody2D rB;
+    public PlanetGravity pG;
 
     public bool IsAttractee
     {
@@ -16,14 +17,14 @@ public class GRAVITON : MonoBehaviour
         {
             if (value == true)
             {
-                if (!PlanetGravity.attractees.Contains(this.GetComponent<Rigidbody2D>()))
+                if (!pG.attractees.Contains(this.GetComponent<Rigidbody2D>()))
                 {
-                    PlanetGravity.attractees.Add(rB);
+                    pG.attractees.Add(rB);
                 }
             }
             else if (value == false)
             {
-                PlanetGravity.attractees.Remove(rB);
+                pG.attractees.Remove(rB);
             }
             isAttractee = value;
         }
@@ -39,12 +40,12 @@ public class GRAVITON : MonoBehaviour
         {
             if (value == true)
             {
-                if (!PlanetGravity.attractors.Contains(this.GetComponent<Rigidbody2D>()))
-                    PlanetGravity.attractors.Add(rB);
+                if (!pG.attractors.Contains(this.GetComponent<Rigidbody2D>()))
+                    pG.attractors.Add(rB);
             }
             else if (value == false)
             {
-                PlanetGravity.attractors.Remove(rB);
+                pG.attractors.Remove(rB);
             }
             isAttractive = value;
         }
@@ -79,13 +80,34 @@ public class GRAVITON : MonoBehaviour
 
     private void OnDisable()
     {
-        PlanetGravity.attractors.Remove(rB);
-        PlanetGravity.attractees.Remove(rB);
+        pG.attractors.Remove(rB);
+        pG.attractees.Remove(rB);
     }
 
     void ApplyVelocity(Vector3 velocity)
     {
         rB.AddForce(initialVel, ForceMode2D.Impulse);
     }
-   
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Planet"))
+        {
+            isAttractee = true;
+            if (!pG.attractees.Contains(this.GetComponent<Rigidbody2D>()))
+            {
+                pG.attractees.Add(rB);
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Planet"))
+        {
+            isAttractee = false;
+            pG.attractees.Remove(rB);
+        }
+    }
+
 }
