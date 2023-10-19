@@ -4,25 +4,31 @@ using UnityEngine;
 
 public class spawn : MonoBehaviour
 {
-    public float speed = 10.0f;
-    private Rigidbody2D RB;
-    private Vector2 screenBounds;
-    // Start is called before the first frame update
-    void Start()
-    {
-        RB = this.GetComponent<Rigidbody2D>();
-        RB.velocity = new Vector2(-speed, 0);
-        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-    }
+    public GameObject objetoPrefab; 
+    public float minY = 1.0f;
+    public float maxY = 5.0f; 
+    public float tiempoDeSpawn = 2.0f; 
 
-  
+    private float tiempoTranscurrido = 0.0f;
 
-    // Update is called once per frame
     void Update()
     {
-        if(transform.position.x < screenBounds.x * 2)
+        tiempoTranscurrido += Time.deltaTime;
+
+        if (tiempoTranscurrido >= tiempoDeSpawn)
         {
-            Destroy(this.gameObject);
+            SpawnObject();
+            tiempoTranscurrido = 0.0f;
         }
+    }
+
+    void SpawnObject()
+    {
+        
+        float randomY = Random.Range(minY, maxY);
+
+        
+        Vector3 spawnPosition = new Vector3(transform.position.x, randomY, transform.position.z);
+        Instantiate(objetoPrefab, spawnPosition, Quaternion.identity);
     }
 }
