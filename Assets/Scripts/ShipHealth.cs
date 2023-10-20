@@ -10,6 +10,10 @@ public class ShipHealth : MonoBehaviour
     public float healthAmount;
     public float maxHealth = 8f;
 
+    private void Start()
+    {
+        healthAmount = maxHealth;
+    }
     public void TakeDamage()
     {
         healthAmount -= -1f;

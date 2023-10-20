@@ -14,6 +14,7 @@ public class Oxygen : MonoBehaviour
     void Start()
     {
         time_remaining = max_time;
+        timer_linear_image.fillAmount = time_remaining / max_time;
     }
 
     void Update()
@@ -23,11 +24,11 @@ public class Oxygen : MonoBehaviour
             time_remaining -= Time.deltaTime;
             timer_linear_image.fillAmount = time_remaining / max_time;
         }
-        if (time_remaining > 0 && sh.healthAmount <= 4f)
-        {
-            time_remaining -= Time.deltaTime * 2;
-            timer_linear_image.fillAmount = time_remaining / max_time;
-        }
+        //if (time_remaining > 0 && sh.healthAmount <= 4f)
+        //{
+            //time_remaining -= Time.deltaTime * 2;
+            //timer_linear_image.fillAmount = time_remaining / max_time;
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
