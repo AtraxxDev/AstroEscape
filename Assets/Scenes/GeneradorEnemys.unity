@@ -271,9 +271,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objetoPrefab: {fileID: 9050979699341968963, guid: bcaeee37a816db14f82146d1db11eccf, type: 3}
-  minY: 1
-  maxY: 5
-  tiempoDeSpawn: 1.15
+  minY: 8.43
+  maxY: 2.85
+  tiempoDeSpawn: 5
+  maxTime: 1
+  minTime: 3
 --- !u!4 &1936313228
 Transform:
   m_ObjectHideFlags: 0
@@ -282,7 +284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936313226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.09, y: 4, z: 0}
+  m_LocalPosition: {x: -13.09, y: 9.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

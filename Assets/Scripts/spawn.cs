@@ -7,7 +7,9 @@ public class spawn : MonoBehaviour
     public GameObject objetoPrefab; 
     public float minY = 1.0f;
     public float maxY = 5.0f; 
-    public float tiempoDeSpawn = 2.0f; 
+    public float tiempoDeSpawn;
+    public float maxTime;
+    public float minTime;
 
     private float tiempoTranscurrido = 0.0f;
 
@@ -19,6 +21,8 @@ public class spawn : MonoBehaviour
         {
             SpawnObject();
             tiempoTranscurrido = 0.0f;
+            tiempoDeSpawn = Random.Range(minTime, maxTime);
+
         }
     }
 
@@ -31,4 +35,7 @@ public class spawn : MonoBehaviour
         Vector3 spawnPosition = new Vector3(transform.position.x, randomY, transform.position.z);
         Instantiate(objetoPrefab, spawnPosition, Quaternion.identity);
     }
+
+
+
 }
