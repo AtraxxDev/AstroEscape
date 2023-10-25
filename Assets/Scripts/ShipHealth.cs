@@ -16,8 +16,8 @@ public class ShipHealth : MonoBehaviour
     }
     public void TakeDamage()
     {
-        healthAmount -= -1f;
-        healthBar.fillAmount = healthAmount / 100f;
+        healthAmount -= 1f;
+        healthBar.fillAmount = healthAmount / 8f;
 
     }
 
@@ -30,14 +30,11 @@ public class ShipHealth : MonoBehaviour
             healthAmount = maxHealth;
         }
 
-        healthBar.fillAmount = healthAmount / 100f;
+        healthBar.fillAmount = healthAmount / 8f;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("enemy"))
-        {
-            TakeDamage();
-        }
+        TakeDamage();
     }
 
 }
