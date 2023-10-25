@@ -57,7 +57,17 @@ public class Timmer : MonoBehaviour
         if (timerText != null)
         {
             timerText.text = "Tiempo: " + currentTime.ToString("F2"); // Muestra el tiempo con dos decimales.
-            Debug.Log("tiempo");
+           
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Collider"))
+            Debug.Log("detecte collision");
+        {
+            Debug.Log("empece rutinas ");
+            StopTimer();
+            GuardarTime();
         }
     }
 
