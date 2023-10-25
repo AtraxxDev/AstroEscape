@@ -62,12 +62,13 @@ public class Timmer : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Collider"))
+        if (other.CompareTag("Player"))
             Debug.Log("detecte collision");
         {
             Debug.Log("empece rutinas ");
             StopTimer();
             GuardarTime();
+            Destroy(gameObject);
         }
     }
 
