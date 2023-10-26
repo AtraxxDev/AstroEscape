@@ -20,12 +20,12 @@ public class fuel : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             fuelAmount -= Time.deltaTime;
-            fuelBar.fillAmount = fuelAmount -= Time.deltaTime;
+            fuelBar.fillAmount = fuelAmount / maxFuel;
         }
         if (Input.GetKey(KeyCode.Space))
         {
             fuelAmount -= Time.deltaTime * 2;
-            fuelBar.fillAmount = fuelAmount -= Time.deltaTime;
+            fuelBar.fillAmount = fuelAmount / maxFuel;
         }
     }
 
