@@ -31,8 +31,7 @@ public class Timmer : MonoBehaviour
         {
             currentTime += Time.deltaTime; // Suma tiempo en lugar de restarlo.
             UpdateTimerText(); // Llama a la función para actualizar el texto del temporizador.  
-        }
-        
+        }    
     }
     public void StartTimer()
     {

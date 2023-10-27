@@ -33,7 +33,8 @@ public class Oxygen : MonoBehaviour
         //time_remaining -= Time.deltaTime * 2;
         //timer_linear_image.fillAmount = time_remaining / max_time;
         //}
-        PuntuacionOxygen();
+       PuntuacionOxygen();
+        PuntuacionOxygen2();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -47,25 +48,50 @@ public class Oxygen : MonoBehaviour
             }
         }
     }
+ 
+
+   public  void PuntuacionOxygen2()
+        {
+            if (time_remaining <= 100)
+            {
+                oxygen = 1000;
+                OxygenText.text = oxygen.ToString();
+
+            }
+            if (time_remaining <= 80)
+            {
+                oxygen = 500;
+                OxygenText.text = oxygen.ToString();
+
+            }
+            if (time_remaining <= 40)
+            {
+                oxygen = 250;
+                OxygenText.text = oxygen.ToString();
+            }
+        }
     public void PuntuacionOxygen()
     {
-        if(time_remaining <= 100)
-        {
-            oxygen = 1000;
-            OxygenText.text = oxygen.ToString();
-            Debug.Log("Mi puntuacion es" + oxygen);
-        }
-        if (time_remaining <= 80)
-        {
-            oxygen = 500;
-            OxygenText.text = oxygen.ToString();
-            Debug.Log("Mi puntuacion es" + oxygen);
-        }
-        if (time_remaining <= 40)
+        if (time_remaining >= 41)
         {
             oxygen = 250;
             OxygenText.text = oxygen.ToString();
-            Debug.Log("Mi puntuacion es" + oxygen);
+
+        }
+        if (time_remaining >= 81)
+        {
+            oxygen = 500;
+            OxygenText.text = oxygen.ToString();
+
+        }
+        if (time_remaining >= 101)
+        {
+            oxygen = 1000;
+            OxygenText.text = oxygen.ToString();
+
         }
     }
+
+
+
 }

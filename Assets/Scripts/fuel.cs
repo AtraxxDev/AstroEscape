@@ -72,5 +72,29 @@ public class fuel : MonoBehaviour
 
             Debug.Log("Mi puntuacion es" + PuntuacionText);
         }
+        if (fuelAmount >= 51)
+        {
+            PuntuacionText = 250;
+
+            timerText.text = PuntuacionText.ToString();
+
+            Debug.Log("Mi puntuacion es" + PuntuacionText);
+        }
+        if (fuelAmount >= 151)
+        {
+            PuntuacionText = 500;
+
+            timerText.text = PuntuacionText.ToString();
+
+            Debug.Log("Mi puntuacion es" + PuntuacionText);
+        }
+        if (fuelAmount >= 251)
+        {
+            PuntuacionText = 1000;
+
+            timerText.text = PuntuacionText.ToString();
+
+            Debug.Log("Mi puntuacion es" + PuntuacionText);
+        }
     }
 }
