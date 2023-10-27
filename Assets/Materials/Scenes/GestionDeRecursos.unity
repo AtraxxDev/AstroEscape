@@ -911,6 +911,7 @@ GameObject:
   - component: {fileID: 1623055824}
   - component: {fileID: 1623055825}
   - component: {fileID: 1623055826}
+  - component: {fileID: 1623055827}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1016,6 +1017,7 @@ MonoBehaviour:
   fuelAmount: 0
   maxFuel: 300
   refill: 50
+  PuntuacionText: 0
 --- !u!50 &1623055823
 Rigidbody2D:
   serializedVersion: 4
@@ -1094,6 +1096,18 @@ MonoBehaviour:
   healthBar: {fileID: 1553437958}
   healthAmount: 0
   maxHealth: 8
+--- !u!114 &1623055827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623055817}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5332f3ee64e8f8a439cf92d9924abd6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1809704551
 GameObject:
   m_ObjectHideFlags: 0

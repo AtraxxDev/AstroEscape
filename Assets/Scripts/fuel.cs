@@ -9,7 +9,8 @@ public class fuel : MonoBehaviour
     public float fuelAmount;
     public float maxFuel = 300f;
     public float refill = 50f;
-    
+    public int PuntuacionText;
+
     void Start()
     {
         fuelAmount = maxFuel;
@@ -24,9 +25,10 @@ public class fuel : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space))
         {
-            fuelAmount -= Time.deltaTime * 2;
+            fuelAmount -= Time.deltaTime * 50;
             fuelBar.fillAmount = fuelAmount / maxFuel;
         }
+        Puntuacion();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -38,6 +40,14 @@ public class fuel : MonoBehaviour
             {
                 fuelAmount = maxFuel;
             }
+        }
+    }
+    private void Puntuacion()
+    {
+        if (fuelAmount >= 250)
+        {
+            PuntuacionText = 1000;
+            Debug.Log("Mi puntuacion es" + PuntuacionText);
         }
     }
 }
