@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class fuel : MonoBehaviour
 {
+    public TMP_Text timerText;
     public Image fuelBar;
     public float fuelAmount;
     public float maxFuel = 300f;
     public float refill = 50f;
-    public int PuntuacionText;
+    private int PuntuacionText;
+
 
     void Start()
     {
@@ -28,7 +32,7 @@ public class fuel : MonoBehaviour
             fuelAmount -= Time.deltaTime * 50;
             fuelBar.fillAmount = fuelAmount / maxFuel;
         }
-        Puntuacion();
+        Puntuacionfuel();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -42,11 +46,30 @@ public class fuel : MonoBehaviour
             }
         }
     }
-    private void Puntuacion()
+    public void Puntuacionfuel()
     {
-        if (fuelAmount >= 250)
+        if (fuelAmount <= 250)
         {
             PuntuacionText = 1000;
+            
+            timerText.text = PuntuacionText.ToString();
+
+            Debug.Log("Mi puntuacion es" + PuntuacionText);
+        }
+        if (fuelAmount <= 150)
+        {
+            PuntuacionText = 500;
+
+            timerText.text = PuntuacionText.ToString();
+
+            Debug.Log("Mi puntuacion es" + PuntuacionText);
+        }
+        if (fuelAmount <= 50)
+        {
+            PuntuacionText = 250;
+
+            timerText.text = PuntuacionText.ToString();
+
             Debug.Log("Mi puntuacion es" + PuntuacionText);
         }
     }

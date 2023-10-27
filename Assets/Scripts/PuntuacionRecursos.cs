@@ -6,7 +6,8 @@ using TMPro;
 public class PuntuacionRecursos : MonoBehaviour
 {
 
-   
+    
+
     // Start is called before the first frame update
     void Start()
     {
