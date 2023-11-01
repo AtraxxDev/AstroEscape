@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &211931202 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 798695406896003332, guid: 7b732adb75496484a9d1e446f96ce471, type: 3}
-  m_PrefabInstance: {fileID: 798695406822517062}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8dd64eb3e9b4bc42b7765d5c8d125e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &233322526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -144,6 +133,10 @@ PrefabInstance:
     - target: {fileID: 4343505757315549009, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343505757315549009, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4343505757315549012, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: m_RootOrder
@@ -191,6 +184,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+--- !u!50 &271581025 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 798695407171492832, guid: 7b732adb75496484a9d1e446f96ce471, type: 3}
+  m_PrefabInstance: {fileID: 798695406822517062}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &501278447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 501278449}
+  - component: {fileID: 501278448}
+  m_Layer: 0
+  m_Name: GravityHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &501278448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501278447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8dd64eb3e9b4bc42b7765d5c8d125e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  g: 1
+  attractors:
+  - {fileID: 271581025}
+  attractees: []
+--- !u!4 &501278449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501278447}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &504510521
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &504510522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf3bc5d6f22e88458dc4e490be34089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pG: {fileID: 211931202}
+  pG: {fileID: 0}
   isAttractive: 1
   isAttractee: 1
   initialVel: {x: -0.93, y: -0.8, z: 0}
@@ -333,7 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf3bc5d6f22e88458dc4e490be34089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pG: {fileID: 211931202}
+  pG: {fileID: 0}
   isAttractive: 1
   isAttractee: 1
   initialVel: {x: 0, y: 0, z: 0}
@@ -510,7 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf3bc5d6f22e88458dc4e490be34089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pG: {fileID: 211931202}
+  pG: {fileID: 501278448}
   isAttractive: 0
   isAttractee: 0
   initialVel: {x: 1, y: 1, z: 0}
@@ -606,6 +652,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 798695407171492833, guid: 7b732adb75496484a9d1e446f96ce471, type: 3}
+      propertyPath: pG
+      value: 
+      objectReference: {fileID: 501278448}
     - target: {fileID: 798695407171492835, guid: 7b732adb75496484a9d1e446f96ce471, type: 3}
       propertyPath: m_Name
       value: Attractive Planet

@@ -54,7 +54,7 @@ public class fuel : MonoBehaviour
             
             timerText.text = PuntuacionText.ToString();
 
-            Debug.Log("Mi puntuacion es" + PuntuacionText);
+           // Debug.Log("Mi puntuacion es" + PuntuacionText);
         }
         if (fuelAmount <= 150)
         {
@@ -62,7 +62,7 @@ public class fuel : MonoBehaviour
 
             timerText.text = PuntuacionText.ToString();
 
-            Debug.Log("Mi puntuacion es" + PuntuacionText);
+           // Debug.Log("Mi puntuacion es" + PuntuacionText);
         }
         if (fuelAmount <= 50)
         {
@@ -70,7 +70,7 @@ public class fuel : MonoBehaviour
 
             timerText.text = PuntuacionText.ToString();
 
-            Debug.Log("Mi puntuacion es" + PuntuacionText);
+           // Debug.Log("Mi puntuacion es" + PuntuacionText);
         }
         if (fuelAmount >= 51)
         {
@@ -78,7 +78,7 @@ public class fuel : MonoBehaviour
 
             timerText.text = PuntuacionText.ToString();
 
-            Debug.Log("Mi puntuacion es" + PuntuacionText);
+            //Debug.Log("Mi puntuacion es" + PuntuacionText);
         }
         if (fuelAmount >= 151)
         {
@@ -86,7 +86,7 @@ public class fuel : MonoBehaviour
 
             timerText.text = PuntuacionText.ToString();
 
-            Debug.Log("Mi puntuacion es" + PuntuacionText);
+            //Debug.Log("Mi puntuacion es" + PuntuacionText);s
         }
         if (fuelAmount >= 251)
         {
@@ -94,7 +94,7 @@ public class fuel : MonoBehaviour
 
             timerText.text = PuntuacionText.ToString();
 
-            Debug.Log("Mi puntuacion es" + PuntuacionText);
+            //Debug.Log("Mi puntuacion es" + PuntuacionText);
         }
     }
 }
