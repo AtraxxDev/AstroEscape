@@ -14,6 +14,7 @@ public class ShipHealth : MonoBehaviour
     private void Start()
     {
         healthAmount = maxHealth;
+        
     }
     public void TakeDamage()
     {
