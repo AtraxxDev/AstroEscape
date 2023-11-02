@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ShipHealth : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class ShipHealth : MonoBehaviour
     public Image healthBar;
     public float healthAmount;
     public float maxHealth = 8f;
-    private int health;
+    private int healthScore;
+    public string SceneName;
     private void Start()
     {
         healthAmount = maxHealth;
@@ -47,40 +49,27 @@ public class ShipHealth : MonoBehaviour
     {
         if (healthAmount <= 7)
         {
-            health = 1000;
-            healthText.text = health.ToString();
-            Debug.Log("Mi puntuacion es" + health);
+            healthScore = 1000;
+            healthText.text = healthScore.ToString();
+            Debug.Log("Mi puntuacion es" + healthScore);
         }
         if (healthAmount <= 5)
         {
-            health = 500;
-            healthText.text = health.ToString();
-            Debug.Log("Mi puntuacion es" + health);
+            healthScore = 500;
+            healthText.text = healthScore.ToString();
+            Debug.Log("Mi puntuacion es" + healthScore);
         }
         if (healthAmount <= 2)
         {
-            health = 250;
-            healthText.text = health.ToString();
-            Debug.Log("Mi puntuacion es" + health);
+            healthScore = 250;
+            healthText.text = healthScore.ToString();
+            Debug.Log("Mi puntuacion es" + healthScore);
         }
-       /* if (healthAmount >= 7)
+        if (healthAmount == 0)
         {
-            health = 1000;
-            healthText.text = health.ToString();
-            Debug.Log("Mi puntuacion es" + health);
+            healthScore = 0;
+            SceneManager.LoadScene(SceneName);
         }
-        if (healthAmount >= 6)
-        {
-            health = 500;
-            healthText.text = health.ToString();
-            Debug.Log("Mi puntuacion es" + health);
-        }
-        if (healthAmount >= 3)
-        {
-            health = 250;
-            healthText.text = health.ToString();
-            Debug.Log("Mi puntuacion es" + health);
-        }*/
     }
 
 }
