@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GRAVITON : MonoBehaviour
@@ -56,7 +57,7 @@ public class GRAVITON : MonoBehaviour
 
     [SerializeField] Vector3 initialVel;
     [SerializeField] bool applyInitialVelocityOnStart;
-    [SerializeField] float G = 1;
+    //[SerializeField] float G = 1;
 
     private void Awake()
     {
@@ -91,9 +92,14 @@ public class GRAVITON : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Planet"))
-        {
-            isAttractee = true;
+        if (other.CompareTag("Planet"))
+        {                       
+            if(other.TryGetComponent<PlanetGravity>(out PlanetGravity planetG))
+            {
+                pG = planetG;
+                isAttractee = true;
+                
+            }
             if (!pG.attractees.Contains(this.GetComponent<Rigidbody2D>()))
             {
                 pG.attractees.Add(rB);
@@ -107,6 +113,7 @@ public class GRAVITON : MonoBehaviour
         {
             isAttractee = false;
             pG.attractees.Remove(rB);
+            pG = null;
         }
     }
 
