@@ -12,6 +12,7 @@ public class fuel : MonoBehaviour
     public float maxFuel = 300f;
     public float refill = 50f;
     public List<TMP_Text> PuntuacionTexts;
+    public GameObject panelGameOver;
 
     void Start()
     {
@@ -33,6 +34,11 @@ public class fuel : MonoBehaviour
             fuelAmount = Mathf.Clamp(fuelAmount, 0f, maxFuel);
             fuelBar.fillAmount = fuelAmount / maxFuel;
             Puntuacionfuel();
+        }
+        if(fuelAmount == 0)
+        {
+            Time.timeScale = 0f;
+            panelGameOver.gameObject.SetActive(true);
         }
     }
 
