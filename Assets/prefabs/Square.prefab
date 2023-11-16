@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   des: {fileID: 9050979699341968963}
-  tiempoDes: 4.8
+  tiempoDes: 10
   vel: 6.23
 --- !u!50 &4167367308603471341
 Rigidbody2D:

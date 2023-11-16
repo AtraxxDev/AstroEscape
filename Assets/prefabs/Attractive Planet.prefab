@@ -229,7 +229,6 @@ GameObject:
   - component: {fileID: 798695407171492833}
   - component: {fileID: 798695407171492832}
   - component: {fileID: 798695407171492844}
-  - component: {fileID: 223882426}
   - component: {fileID: 1571060067}
   m_Layer: 0
   m_Name: Attractive Planet
@@ -362,22 +361,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.316558
---- !u!114 &223882426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798695407171492835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8dd64eb3e9b4bc42b7765d5c8d125e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  g: 5
-  attractors:
-  - {fileID: 798695407171492832}
-  attractees: []
 --- !u!114 &1571060067
 MonoBehaviour:
   m_ObjectHideFlags: 0
