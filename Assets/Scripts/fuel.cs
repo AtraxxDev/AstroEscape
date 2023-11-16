@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
 public class fuel : MonoBehaviour
 {
     public TMP_Text timerText;
@@ -12,27 +11,29 @@ public class fuel : MonoBehaviour
     public float fuelAmount;
     public float maxFuel = 300f;
     public float refill = 50f;
-    private int PuntuacionText;
-
+    public List<TMP_Text> PuntuacionTexts;
 
     void Start()
     {
-        fuelAmount = maxFuel;
+        fuelAmount = Mathf.Clamp(fuelAmount, 0f, maxFuel);
+        ActualizarPuntuacion();
     }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) && fuelAmount > 0)
         {
             fuelAmount -= Time.deltaTime;
             fuelBar.fillAmount = fuelAmount / maxFuel;
+            Puntuacionfuel();
         }
         if (Input.GetKey(KeyCode.Space))
         {
             fuelAmount -= Time.deltaTime * 50;
+            fuelAmount = Mathf.Clamp(fuelAmount, 0f, maxFuel);
             fuelBar.fillAmount = fuelAmount / maxFuel;
+            Puntuacionfuel();
         }
-        Puntuacionfuel();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -40,29 +41,36 @@ public class fuel : MonoBehaviour
         if (collision.CompareTag("gasolina"))
         {
             fuelAmount += refill;
-            if (fuelAmount > maxFuel)
-            {
-                fuelAmount = maxFuel;
-            }
+            fuelAmount = Mathf.Clamp(fuelAmount, 0f, maxFuel);
+            ActualizarPuntuacion();
         }
     }
-    public void Puntuacionfuel()
+
+    private void Puntuacionfuel()
     {
-        if (fuelAmount <= 250)
+        if (fuelAmount <= 300 && fuelAmount > 150)
         {
-            PuntuacionText = 1000;  
-            timerText.text = PuntuacionText.ToString();      
+            ActualizarPuntuacion(1000);
         }
-        if (fuelAmount <= 150)
+        else if (fuelAmount <= 150 && fuelAmount > 50)
         {
-            PuntuacionText = 500;
-            timerText.text = PuntuacionText.ToString();        
+            ActualizarPuntuacion(500);
         }
-        if (fuelAmount <= 50)
+        else if (fuelAmount <= 50)
         {
-            PuntuacionText = 250;
-            timerText.text = PuntuacionText.ToString();
+            ActualizarPuntuacion(250);
         }
-     
+        else
+        {
+            ActualizarPuntuacion(0);
+        }
+    }
+
+    private void ActualizarPuntuacion(int puntuacion = 0)
+    {
+        foreach (TMP_Text text in PuntuacionTexts)
+        {
+            text.text =  puntuacion.ToString();
+        }
     }
 }

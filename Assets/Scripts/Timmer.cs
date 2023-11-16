@@ -6,22 +6,20 @@ using TMPro;
 
 public class Timmer : MonoBehaviour
 {
-    public float maxTime = 60.0f; // Tiempo máximo del temporizador en segundos.
+    public float maxTime = 60.0f;
     private float currentTime;
-
     private bool isRunning = false;
-
-    public TMP_Text timerText; // Agrega una referencia al elemento de interfaz de usuario.
+    public List<TMP_Text> timerTexts; // Cambiado a una lista para permitir múltiples objetos TMP_Text.
 
     private void Start()
     {
-        currentTime = 0; // Comienza desde cero.
+        currentTime = 0;
         StartTimer();
 
-        // Asegúrate de que timerText esté asignado en el Inspector.
-        if (timerText == null)
+        // Asegúrate de que timerTexts esté asignado en el Inspector.
+        if (timerTexts == null || timerTexts.Count == 0)
         {
-            Debug.LogError("El objeto TimerText no está asignado en el Inspector.");
+            Debug.LogError("La lista de objetos TimerText no está asignada en el Inspector o está vacía.");
         }
     }
 
@@ -29,49 +27,48 @@ public class Timmer : MonoBehaviour
     {
         if (isRunning)
         {
-            currentTime += Time.deltaTime; // Suma tiempo en lugar de restarlo.
-            UpdateTimerText(); // Llama a la función para actualizar el texto del temporizador.  
-        }    
+            currentTime += Time.deltaTime;
+            UpdateTimerText();
+        }
     }
+
     public void StartTimer()
     {
         isRunning = true;
     }
+
     public void StopTimer()
     {
         isRunning = false;
     }
+
     public void ResetTimer()
     {
-        currentTime = 0; // Reinicia el temporizador a cero.
+        currentTime = 0;
         isRunning = false;
-        UpdateTimerText(); // Asegúrate de actualizar el texto al reiniciar el temporizador.
+        UpdateTimerText();
     }
-    public void GuardarTime() // Aqui se guardara el tiempo 
+
+    public void GuardarTime()
     {
-        Debug.Log(currentTime); //Se guarda el tiempo
+        Debug.Log(currentTime);
     }
-    public  void UpdateTimerText()
+
+    public void UpdateTimerText()
     {
-        if (timerText != null)
+        foreach (TMP_Text text in timerTexts)
         {
-            timerText.text = "Tiempo: " + currentTime.ToString("F2"); // Muestra el tiempo con dos decimales.
-           
+            text.text = "Tiempo: " + currentTime.ToString("F2");
         }
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-            Debug.Log("detecte collision");
         {
-            Debug.Log("empece rutinas ");
             StopTimer();
             GuardarTime();
             Destroy(gameObject);
         }
     }
-
 }
-
-
-

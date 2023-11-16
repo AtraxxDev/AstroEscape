@@ -6,82 +6,63 @@ using TMPro;
 
 public class ShipHealth : MonoBehaviour
 {
-    public TMP_Text healthText;
+    public List<TMP_Text> healthTexts;
     public Image healthBar;
     public float healthAmount;
-    public float maxHealth = 8f;
-    private int health;
+    public float maxHealth = 10f;
+
     private void Start()
     {
-        healthAmount = maxHealth;
+        healthAmount = Mathf.Clamp(healthAmount, 0, maxHealth);
+        ActualizarPuntuacion();
     }
+
     public void TakeDamage()
     {
         healthAmount -= 1f;
-        healthBar.fillAmount = healthAmount / 8f;
-
+        healthAmount = Mathf.Clamp(healthAmount, 0, maxHealth);
+        healthBar.fillAmount = healthAmount / maxHealth;
+        ActualizarPuntuacion();
     }
-    private void Update()
+
+    public void HealAmount(float healingAmount)
     {
-        PuntuacionHealth();
+        healthAmount += healingAmount;
+        healthAmount = Mathf.Clamp(healthAmount, 0, maxHealth);
+        healthBar.fillAmount = healthAmount / maxHealth;
+        ActualizarPuntuacion();
     }
 
-    public void HealAmounth(float healingAmounth)
-    {
-        healthAmount += healingAmounth;
-        healthAmount = Mathf.Clamp(healthAmount,0, 100);
-        if (healthAmount > maxHealth)
-        {
-            healthAmount = maxHealth;
-        }
-
-        healthBar.fillAmount = healthAmount / 8f;
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         TakeDamage();
     }
 
-    private void PuntuacionHealth()
+    private void ActualizarPuntuacion()
     {
-        if (healthAmount <= 5)
+        int puntuacion = 0;
+
+        if (healthAmount <= 3)
         {
-            health = 1000;
-            healthText.text = health.ToString();
-            
+            puntuacion = 250;
         }
-        if (healthAmount <= 2)
+        else if (healthAmount <= 5)
         {
-            health = 500;
-            healthText.text = health.ToString();
-            
+            puntuacion = 500;
         }
-        if (healthAmount <= 0)
+        else if (healthAmount <= 10)
         {
-            health = 250;
-            healthText.text = health.ToString();
-           
+            puntuacion = 1000;
         }
-        if (healthAmount >= 0)
-        {
-            health = 250;
-            healthText.text = health.ToString();
-           
-        }
-        if (healthAmount >= 2)
-        {
-            health = 500;
-            healthText.text = health.ToString();
-            
-        }
-        if (healthAmount >= 5)
-        {
-            health = 1000;
-            healthText.text = health.ToString();
-           
-        }
-     
-      
+
+        SetPuntuacion(puntuacion);
     }
 
+    private void SetPuntuacion(int puntuacion)
+    {
+        foreach (TMP_Text text in healthTexts)
+        {
+            text.text = puntuacion.ToString();
+        }
+    }
 }
