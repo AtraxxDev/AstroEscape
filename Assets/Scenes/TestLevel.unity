@@ -4207,10 +4207,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1946925256}
     m_Modifications:
-    - target: {fileID: 223882426, guid: 7b732adb75496484a9d1e446f96ce471, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 798695407171492835, guid: 7b732adb75496484a9d1e446f96ce471, type: 3}
       propertyPath: m_Name
       value: Attractive Planet (1)
@@ -12665,7 +12661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1833970594
 Transform:
   m_ObjectHideFlags: 0
