@@ -13,9 +13,14 @@ GameObject:
   - component: {fileID: 4343505757315549010}
   - component: {fileID: 4343505757315549011}
   - component: {fileID: 4343505757315549008}
+  - component: {fileID: 855590070}
+  - component: {fileID: 277438081}
+  - component: {fileID: 277438082}
+  - component: {fileID: 277438083}
+  - component: {fileID: 277438084}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,9 +80,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: dace78f855de00b4eb5c106d089931a5, type: 3}
-  m_Color: {r: 0, g: 0.84153175, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -150,3 +155,88 @@ MonoBehaviour:
   thrustForce: 0.5
   turboMultiplier: 2
   brakeForce: 0.5
+--- !u!114 &855590070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343505757315549009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba0a4eda62ff8b46920c5f43e8ffa88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Planet
+  zoomSpeed: 0.5
+  minZoom: 8
+  maxZoom: 12
+  zoomInDelay: 1
+  cam: {fileID: 0}
+--- !u!114 &277438081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343505757315549009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf3bc5d6f22e88458dc4e490be34089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pG: {fileID: 0}
+  isAttractive: 0
+  isAttractee: 0
+  initialVel: {x: 0, y: 0, z: 0}
+  applyInitialVelocityOnStart: 0
+--- !u!114 &277438082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343505757315549009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f8dd8ebf0e6c96418506a2362df8ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthTexts: []
+  healthBar: {fileID: 0}
+  healthAmount: 0
+  maxHealth: 8
+--- !u!114 &277438083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343505757315549009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d53c34848caf6449886b4f18adbf5d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 0}
+  fuelBar: {fileID: 0}
+  fuelAmount: 0
+  maxFuel: 300
+  refill: 50
+  PuntuacionTexts: []
+--- !u!114 &277438084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343505757315549009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063721503dee46e45a100bb4bd003523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OxygenTexts: []
+  timer_linear_image: {fileID: 0}
+  time_remaining: 0
+  oxygenRecovery: 15
