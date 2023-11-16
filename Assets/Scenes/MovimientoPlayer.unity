@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &43459587
 RectTransform:
   m_ObjectHideFlags: 0
@@ -784,6 +784,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas Recursos
       objectReference: {fileID: 0}
+    - target: {fileID: 7894587410419663896, guid: b63b84badb580d8449e031ca6e6fd72b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7894587410419663908, guid: b63b84badb580d8449e031ca6e6fd72b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1282,7 +1286,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1f0dcbcb6cdea7a4fafece0ea6437eea, type: 3}
-  m_Color: {r: 0.122641504, g: 0.09198113, b: 0.10808501, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -2676,6 +2680,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasPuntuacion
       objectReference: {fileID: 0}
+    - target: {fileID: 6311992681187000394, guid: 574283bfdc3861441b62a01a59691c75, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6311992681639569593, guid: 574283bfdc3861441b62a01a59691c75, type: 3}
       propertyPath: m_fontSize
       value: 60
@@ -3212,7 +3220,7 @@ Transform:
   m_GameObject: {fileID: 1361661648}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -16.000069, y: 42.690258, z: 0.6206405}
-  m_LocalScale: {x: 8, y: 8, z: 8}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1636345444}
@@ -3650,6 +3658,8 @@ GameObject:
   - component: {fileID: 1579113500}
   - component: {fileID: 1579113502}
   - component: {fileID: 1579113503}
+  - component: {fileID: 1579113505}
+  - component: {fileID: 1579113504}
   m_Layer: 0
   m_Name: Mart (1)
   m_TagString: Planet
@@ -3748,19 +3758,52 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579113499}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &1579113504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579113499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8dd64eb3e9b4bc42b7765d5c8d125e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  g: 2
+  attractors:
+  - {fileID: 1579113503}
+  attractees: []
+--- !u!114 &1579113505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579113499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf3bc5d6f22e88458dc4e490be34089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pG: {fileID: 0}
+  isAttractive: 1
+  isAttractee: 0
+  initialVel: {x: 0, y: 0, z: 0}
+  applyInitialVelocityOnStart: 0
 --- !u!1 &1626243645
 GameObject:
   m_ObjectHideFlags: 0

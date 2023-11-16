@@ -8,6 +8,7 @@ TagManager:
   - Collider
   - oxigeno
   - gasolina
+  - Zoom
   layers:
   - Default
   - TransparentFX
