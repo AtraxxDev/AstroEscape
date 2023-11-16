@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6954165862585896621}
   - component: {fileID: 6954165862585896622}
   - component: {fileID: 6954165862585896623}
+  - component: {fileID: 6229474307801261620}
   m_Layer: 0
   m_Name: Oxigeno Recolect
   m_TagString: oxigeno
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6954165862585896616}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 103.1, y: -27.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -111,3 +112,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &6229474307801261620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6954165862585896616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d109fbd2e47d87147b77f3aab8d32673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Collectable: {fileID: 6954165862585896616}
