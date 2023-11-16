@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4343505757315549008}
   - component: {fileID: 855590070}
   - component: {fileID: 277438081}
+  - component: {fileID: 6671390375784586045}
   - component: {fileID: 277438082}
   - component: {fileID: 277438083}
   - component: {fileID: 277438084}
@@ -190,6 +191,23 @@ MonoBehaviour:
   isAttractee: 0
   initialVel: {x: 0, y: 0, z: 0}
   applyInitialVelocityOnStart: 0
+--- !u!114 &6671390375784586045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343505757315549009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf3bc5d6f22e88458dc4e490be34089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pG: {fileID: 0}
+  isAttractive: 0
+  isAttractee: 0
+  initialVel: {x: 0, y: 0, z: 0}
+  applyInitialVelocityOnStart: 0
 --- !u!114 &277438082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,9 +220,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8dd8ebf0e6c96418506a2362df8ac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthTexts: []
+  healthTexts:
+  - {fileID: 0}
+  - {fileID: 0}
   healthBar: {fileID: 0}
-  healthAmount: 0
+  healthAmount: 8
   maxHealth: 8
 --- !u!114 &277438083
 MonoBehaviour:
@@ -220,10 +240,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 0}
   fuelBar: {fileID: 0}
-  fuelAmount: 0
+  fuelAmount: 300
   maxFuel: 300
   refill: 50
-  PuntuacionTexts: []
+  PuntuacionTexts:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &277438084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,7 +258,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063721503dee46e45a100bb4bd003523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OxygenTexts: []
+  OxygenTexts:
+  - {fileID: 0}
+  - {fileID: 0}
   timer_linear_image: {fileID: 0}
-  time_remaining: 0
+  time_remaining: 1200
   oxygenRecovery: 15
