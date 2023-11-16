@@ -34,7 +34,7 @@ public class Oxygen : MonoBehaviour
         //timer_linear_image.fillAmount = time_remaining / max_time;
         //}
        PuntuacionOxygen();
-        PuntuacionOxygen2();
+        //PuntuacionOxygen2();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -50,48 +50,37 @@ public class Oxygen : MonoBehaviour
     }
  
 
-   public  void PuntuacionOxygen2()
-        {
-            if (time_remaining <= 100)
-            {
-                oxygen = 1000;
-                OxygenText.text = oxygen.ToString();
-
-            }
-            if (time_remaining <= 80)
-            {
-                oxygen = 500;
-                OxygenText.text = oxygen.ToString();
-
-            }
-            if (time_remaining <= 40)
-            {
-                oxygen = 250;
-                OxygenText.text = oxygen.ToString();
-            }
-        }
-    public void PuntuacionOxygen()
-    {
-        if (time_remaining >= 41)
-        {
-            oxygen = 250;
-            OxygenText.text = oxygen.ToString();
-
-        }
-        if (time_remaining >= 81)
-        {
-            oxygen = 500;
-            OxygenText.text = oxygen.ToString();
-
-        }
-        if (time_remaining >= 101)
+    public void PuntuacionOxygen() 
+    {     
+        if (time_remaining <= 100)// Sie s menor que 100 su puntuacion sera igual a 1000 y asi todos los de abajo 
         {
             oxygen = 1000;
             OxygenText.text = oxygen.ToString();
-
+        }
+        if (time_remaining <= 80)
+        {
+            oxygen = 500;
+            OxygenText.text = oxygen.ToString();
+        }
+        if (time_remaining <= 40)
+        {
+            oxygen = 250;
+            OxygenText.text = oxygen.ToString();
+        }
+        if (time_remaining >= 40)
+        {
+            oxygen = 250;
+            OxygenText.text = oxygen.ToString();
+        }
+        if (time_remaining >= 80)
+        {
+            oxygen = 500;
+            OxygenText.text = oxygen.ToString();
+        }
+        if (time_remaining >= 100)
+        {
+            oxygen = 1000;
+            OxygenText.text = oxygen.ToString();
         }
     }
-
-
-
 }

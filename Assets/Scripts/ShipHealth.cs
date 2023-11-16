@@ -44,42 +44,44 @@ public class ShipHealth : MonoBehaviour
 
     private void PuntuacionHealth()
     {
-        if (healthAmount <= 7)
+        if (healthAmount <= 5)
         {
             health = 1000;
             healthText.text = health.ToString();
-            Debug.Log("Mi puntuacion es" + health);
-        }
-        if (healthAmount <= 5)
-        {
-            health = 500;
-            healthText.text = health.ToString();
-            Debug.Log("Mi puntuacion es" + health);
+            
         }
         if (healthAmount <= 2)
         {
+            health = 500;
+            healthText.text = health.ToString();
+            
+        }
+        if (healthAmount <= 0)
+        {
             health = 250;
             healthText.text = health.ToString();
-            Debug.Log("Mi puntuacion es" + health);
+           
         }
-       /* if (healthAmount >= 7)
+        if (healthAmount >= 0)
         {
-            health = 1000;
+            health = 250;
             healthText.text = health.ToString();
-            Debug.Log("Mi puntuacion es" + health);
+           
         }
-        if (healthAmount >= 6)
+        if (healthAmount >= 2)
         {
             health = 500;
             healthText.text = health.ToString();
-            Debug.Log("Mi puntuacion es" + health);
+            
         }
-        if (healthAmount >= 3)
+        if (healthAmount >= 5)
         {
-            health = 250;
+            health = 1000;
             healthText.text = health.ToString();
-            Debug.Log("Mi puntuacion es" + health);
-        }*/
+           
+        }
+     
+      
     }
 
 }
