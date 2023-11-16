@@ -4,11 +4,16 @@ public class Parallax : MonoBehaviour
 {
     public float speed = 1.0f; // Velocidad de desplazamiento del tiling en X
     private SpriteRenderer spriteRenderer;
+    private Camera mainCamera;
+    private Vector3 initialScale; // Almacena la escala inicial del objeto
 
     void Start()
     {
         // Obtener el SpriteRenderer adjunto al GameObject
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // Obtener la cámara principal
+        mainCamera = Camera.main;
 
         // Asegurarse de que el SpriteRenderer tiene un material instanciado (no compartido)
         if (!spriteRenderer.material.HasProperty("_MainTex"))
@@ -16,6 +21,9 @@ public class Parallax : MonoBehaviour
             Debug.LogError("El material del SpriteRenderer no tiene una textura principal (_MainTex).");
             return;
         }
+
+        // Almacena la escala inicial del objeto
+        initialScale = transform.localScale;
     }
 
     void Update()
@@ -26,5 +34,12 @@ public class Parallax : MonoBehaviour
 
         // Aplicar el desplazamiento al material del SpriteRenderer
         spriteRenderer.material.SetTextureOffset("_MainTex", offsetVector);
+
+        // Ajustar la escala del sprite en función del tamaño ortográfico de la cámara
+        float cameraSize = mainCamera.orthographicSize;
+        float scale = cameraSize / 5f; // Ajusta el divisor según tu necesidad
+
+        // Multiplica la escala calculada por la escala inicial del objeto
+        transform.localScale = new Vector3(initialScale.x * scale, initialScale.y * scale, 1f);
     }
 }

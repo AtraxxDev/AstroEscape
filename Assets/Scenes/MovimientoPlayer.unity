@@ -202,7 +202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107039782}
   m_LocalRotation: {x: -0, y: -0, z: -0.16775303, w: 0.98582906}
-  m_LocalPosition: {x: 27, y: 41.7, z: 0}
+  m_LocalPosition: {x: 35.7, y: 48.6, z: 0}
   m_LocalScale: {x: 10.288, y: 10.288, z: 10.288}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -224,7 +224,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5999999
+  m_Radius: 1.1424874
 --- !u!50 &107039786
 Rigidbody2D:
   serializedVersion: 4
@@ -347,7 +347,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 1.0315771
 --- !u!50 &228042576
 Rigidbody2D:
   serializedVersion: 4
@@ -356,7 +356,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228042572}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -432,7 +432,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1f0dcbcb6cdea7a4fafece0ea6437eea, type: 3}
   m_Color: {r: 0.122641504, g: 0.09198113, b: 0.10808501, a: 1}
   m_FlipX: 0
@@ -453,11 +453,11 @@ Transform:
   m_GameObject: {fileID: 382941152}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.0872, y: -0.4173, z: 10}
-  m_LocalScale: {x: 2.072429, y: 2.0724292, z: 2.072429}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 519420032}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &382941155
 MonoBehaviour:
@@ -481,7 +481,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 474909609}
-  - component: {fileID: 474909608}
   m_Layer: 0
   m_Name: Zoom In
   m_TagString: Untagged
@@ -489,23 +488,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &474909608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474909607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ba0a4eda62ff8b46920c5f43e8ffa88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: Planet
-  zoomSpeed: 0.5
-  minZoom: 10
-  maxZoom: 50
-  cam: {fileID: 519420031}
 --- !u!4 &474909609
 Transform:
   m_ObjectHideFlags: 0
@@ -637,8 +619,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1648858583}
   - {fileID: 382941154}
+  - {fileID: 1648858583}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -846,7 +828,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838958774}
   m_LocalRotation: {x: -0, y: -0, z: 0.062109236, w: 0.99806935}
-  m_LocalPosition: {x: 28.5, y: 67.2, z: 0}
+  m_LocalPosition: {x: 28.7, y: 78.3, z: 0}
   m_LocalScale: {x: 15.347638, y: 15.347638, z: 15.347638}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -868,7 +850,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.80000013
+  m_Radius: 1.0315771
 --- !u!50 &838958778
 Rigidbody2D:
   serializedVersion: 4
@@ -890,6 +872,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!1 &855590065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4343505757315549009, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+  m_PrefabInstance: {fileID: 4343505757049424113}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &855590070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855590065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba0a4eda62ff8b46920c5f43e8ffa88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Planet
+  zoomSpeed: 0.5
+  minZoom: 5
+  maxZoom: 10
+  zoomInDelay: 1
+  cam: {fileID: 519420031}
 --- !u!1 &1162003247
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,7 +996,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 1.0315771
 --- !u!50 &1162003251
 Rigidbody2D:
   serializedVersion: 4
@@ -1123,7 +1128,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361661648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.4, y: 34.2, z: 0}
+  m_LocalPosition: {x: -7.1, y: 40.9, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1145,7 +1150,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 1.0315771
 --- !u!50 &1361661652
 Rigidbody2D:
   serializedVersion: 4
@@ -1268,7 +1273,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 1.0315771
 --- !u!50 &1562720435
 Rigidbody2D:
   serializedVersion: 4
@@ -1369,7 +1374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579113499}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.2, y: 19.1, z: 0}
+  m_LocalPosition: {x: 19, y: 25.5, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1391,7 +1396,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 1.0315771
 --- !u!50 &1579113503
 Rigidbody2D:
   serializedVersion: 4
@@ -1492,7 +1497,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1626243645}
   m_LocalRotation: {x: -0, y: -0, z: 0.062109236, w: 0.99806935}
-  m_LocalPosition: {x: -17.9, y: 61.4, z: 0}
+  m_LocalPosition: {x: -19.4, y: 67.3, z: 0}
   m_LocalScale: {x: 10.288, y: 10.288, z: 10.288}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1514,7 +1519,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.9199998
+  m_Radius: 1.3626752
 --- !u!50 &1626243649
 Rigidbody2D:
   serializedVersion: 4
@@ -1594,7 +1599,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 9af93d881d9b4cd4ea7b2b00b52eb484, type: 3}
   m_Color: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
   m_FlipX: 0
@@ -1619,7 +1624,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 519420032}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1648858584
 MonoBehaviour:
@@ -1735,7 +1740,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 0.98357636
 --- !u!50 &2089805514
 Rigidbody2D:
   serializedVersion: 4
@@ -1826,7 +1831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4343505757315549013, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
