@@ -6757,6 +6757,10 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 501768120}
+    - target: {fileID: 3678586666527051915, guid: 2a8dc780dff855f439594da738b2b189, type: 3}
+      propertyPath: ColliderPortal
+      value: 
+      objectReference: {fileID: 2013077045}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a8dc780dff855f439594da738b2b189, type: 3}
 --- !u!1 &1063037459
@@ -13361,6 +13365,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d987058bc451ff46aac9872579dfe0d, type: 3}
+--- !u!1 &2013077045 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1738885233798561554, guid: 7d987058bc451ff46aac9872579dfe0d, type: 3}
+  m_PrefabInstance: {fileID: 2013077044}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2032382617
 PrefabInstance:
   m_ObjectHideFlags: 0
