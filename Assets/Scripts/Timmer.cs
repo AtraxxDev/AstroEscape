@@ -10,11 +10,13 @@ public class Timmer : MonoBehaviour
     private float currentTime;
     private bool isRunning = false;
     public List<TMP_Text> timerTexts; // Cambiado a una lista para permitir múltiples objetos TMP_Text.
+    public GameObject ColliderPortal;
 
     private void Start()
     {
         currentTime = 0;
         StartTimer();
+
 
         // Asegúrate de que timerTexts esté asignado en el Inspector.
         if (timerTexts == null || timerTexts.Count == 0)
@@ -69,6 +71,7 @@ public class Timmer : MonoBehaviour
             StopTimer();
             GuardarTime();
             Destroy(gameObject);
+            ColliderPortal.SetActive(true);
         }
     }
 }
