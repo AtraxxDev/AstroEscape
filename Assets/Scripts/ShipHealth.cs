@@ -10,13 +10,20 @@ public class ShipHealth : MonoBehaviour
     public Image healthBar;
     public float healthAmount;
     public float maxHealth = 10f;
-
+    public GameObject panel;
     private void Start()
     {
         healthAmount = Mathf.Clamp(healthAmount, 0, maxHealth);
         ActualizarPuntuacion();
     }
-
+    private void Update()
+    {
+        if(healthAmount == 0)
+        {
+            Time.timeScale = 0f;
+            panel.gameObject.SetActive(true);
+        }
+    }
     public void TakeDamage()
     {
         healthAmount -= 1f;
