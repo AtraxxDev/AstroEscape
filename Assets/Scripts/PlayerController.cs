@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
         rb.gravityScale = 0f;
    
         rb.bodyType = RigidbodyType2D.Dynamic;
+
+        
     }
 
     void Update()
