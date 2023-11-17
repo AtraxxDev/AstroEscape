@@ -7195,6 +7195,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 501768120}
     - target: {fileID: 3678586666527051915, guid: 2a8dc780dff855f439594da738b2b189, type: 3}
+      propertyPath: ColliderPortal
+      value: 
+      objectReference: {fileID: 2087747427}
+    - target: {fileID: 3678586666527051915, guid: 2a8dc780dff855f439594da738b2b189, type: 3}
       propertyPath: timerTexts.Array.data[0]
       value: 
       objectReference: {fileID: 1829706825}
@@ -8018,6 +8022,7 @@ GameObject:
   - component: {fileID: 1130446485}
   - component: {fileID: 1130446487}
   - component: {fileID: 1130446486}
+  - component: {fileID: 1130446488}
   m_Layer: 0
   m_Name: FondoEstrellas
   m_TagString: Untagged
@@ -8047,7 +8052,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130446484}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bbbdbda6be3cd140930be91ff473da2, type: 3}
   m_Name: 
@@ -8099,12 +8104,25 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 35.8, y: 19.1}
+  m_Size: {x: 12.734512, y: 7.278584}
   m_AdaptiveModeThreshold: 1
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1130446488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130446484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7273f4f0d8b55234d9694e7bc11220e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.25
 --- !u!1 &1138662768
 GameObject:
   m_ObjectHideFlags: 0
@@ -9539,6 +9557,7 @@ GameObject:
   - component: {fileID: 1387110537}
   - component: {fileID: 1387110539}
   - component: {fileID: 1387110538}
+  - component: {fileID: 1387110540}
   m_Layer: 0
   m_Name: FondoGases
   m_TagString: Untagged
@@ -9554,7 +9573,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387110536}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 0.104, y: -0.2121, z: 10}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9568,7 +9587,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387110536}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bbbdbda6be3cd140930be91ff473da2, type: 3}
   m_Name: 
@@ -9616,16 +9635,29 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: 1f0dcbcb6cdea7a4fafece0ea6437eea, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.24519403, g: 0.31960323, b: 0.3584906, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 26.65, y: 14.4}
+  m_Size: {x: 9.070543, y: 5.383099}
   m_AdaptiveModeThreshold: 1
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1387110540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387110536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7273f4f0d8b55234d9694e7bc11220e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.2
 --- !u!1001 &1395968326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14528,6 +14560,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2087747427 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1738885233798561554, guid: 7d987058bc451ff46aac9872579dfe0d, type: 3}
+  m_PrefabInstance: {fileID: 986492516}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2117409710 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6954165862585896621, guid: d942e1c4dd948814abe69b477ba50cff, type: 3}
@@ -15005,10 +15042,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2043989825}
     - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
-      propertyPath: healthTexts.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: healthTexts.Array.data[0]
       value: 
       objectReference: {fileID: 285860861}
@@ -15025,10 +15058,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 766551167}
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
-      propertyPath: PuntuacionTexts.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: PuntuacionTexts.Array.data[0]
       value: 
       objectReference: {fileID: 766551167}
@@ -15041,10 +15070,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1927601704}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
-      propertyPath: OxygenTexts.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: OxygenTexts.Array.data[0]
       value: 
       objectReference: {fileID: 1651323289}
@@ -15056,6 +15081,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 855590070, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: targetTag
+      value: Zoom
+      objectReference: {fileID: 0}
     - target: {fileID: 4343505757315549009, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: m_Name
       value: Player
