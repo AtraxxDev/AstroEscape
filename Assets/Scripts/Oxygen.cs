@@ -9,30 +9,21 @@ public class Oxygen : MonoBehaviour
     public List<TMP_Text> OxygenTexts;
     public Image timer_linear_image;
     public float time_remaining;
-    public float max_time = 120f;
+    private float max_time = 120f;
     public float oxygenRecovery = 15f;
-    public GameObject panelGameOver;
 
     private void Start()
     {
-       // time_remaining = Mathf.Clamp(time_remaining, 0f, max_time);
+        time_remaining = Mathf.Clamp(time_remaining, 0f, max_time);
         timer_linear_image.fillAmount = time_remaining / max_time;
-       
     }
 
-     void Update()
+    private void Update()
     {
-       
-
         if (time_remaining > 0)
-        {   
+        {
             time_remaining -= Time.deltaTime;
             timer_linear_image.fillAmount = time_remaining / max_time;
-        }
-        if (time_remaining == 120)
-        {
-            Time.timeScale = 0f;
-            panelGameOver.gameObject.SetActive(true);
         }
 
         PuntuacionOxygen();
@@ -63,7 +54,6 @@ public class Oxygen : MonoBehaviour
         {
             oxygen = 1000;
         }
-      
 
         SetPuntuacion(oxygen);
     }
