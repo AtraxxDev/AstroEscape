@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 4343505757315549008}
   - component: {fileID: 855590070}
   - component: {fileID: 277438081}
-  - component: {fileID: 6671390375784586045}
   - component: {fileID: 277438082}
   - component: {fileID: 277438083}
   - component: {fileID: 277438084}
@@ -153,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationalSpeed: 0.5
+  maxAngularVelocity: 5
   thrustForce: 0.5
   turboMultiplier: 2
   brakeForce: 0.5
@@ -168,30 +168,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ba0a4eda62ff8b46920c5f43e8ffa88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Planet
+  targetTag: Zoom
   zoomSpeed: 0.5
   minZoom: 8
   maxZoom: 12
   zoomInDelay: 1
   cam: {fileID: 0}
 --- !u!114 &277438081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4343505757315549009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bf3bc5d6f22e88458dc4e490be34089, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pG: {fileID: 0}
-  isAttractive: 0
-  isAttractee: 0
-  initialVel: {x: 0, y: 0, z: 0}
-  applyInitialVelocityOnStart: 0
---- !u!114 &6671390375784586045
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
