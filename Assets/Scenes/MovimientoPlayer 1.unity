@@ -16616,6 +16616,10 @@ PrefabInstance:
       propertyPath: OxygenTexts.Array.data[1]
       value: 
       objectReference: {fileID: 1245034800}
+    - target: {fileID: 4343505757315549008, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: rotationalSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4343505757315549009, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: m_Name
       value: Player
