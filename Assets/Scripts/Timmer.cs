@@ -6,6 +6,7 @@ using TMPro;
 
 public class Timmer : MonoBehaviour
 {
+    public GameObject ArrowGO;
     public float maxTime = 60.0f;
     private float currentTime;
     private bool isRunning = false;
@@ -70,8 +71,9 @@ public class Timmer : MonoBehaviour
         {
             StopTimer();
             GuardarTime();
-            Destroy(gameObject);
             ColliderPortal.SetActive(true);
+            ArrowGO.SetActive(true);
+            Destroy(gameObject);
         }
     }
 }
