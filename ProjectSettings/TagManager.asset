@@ -9,6 +9,7 @@ TagManager:
   - oxigeno
   - gasolina
   - Zoom
+  - Jugador
   layers:
   - Default
   - TransparentFX
