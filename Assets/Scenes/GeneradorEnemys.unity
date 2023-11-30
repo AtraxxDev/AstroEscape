@@ -444,7 +444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &271390645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,7 +622,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &422463888
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -671,7 +671,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422463887}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d8dd37c26b87f849894633c62f61c38, type: 3}
   m_Name: 
@@ -749,7 +749,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -822,7 +822,7 @@ GameObject:
   - component: {fileID: 573640396}
   - component: {fileID: 573640395}
   m_Layer: 0
-  m_Name: Square (5)
+  m_Name: Triangulo
   m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -937,7 +937,7 @@ GameObject:
   - component: {fileID: 605210214}
   - component: {fileID: 605210213}
   m_Layer: 0
-  m_Name: Square (3)
+  m_Name: Gran nube
   m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1171,7 +1171,7 @@ GameObject:
   - component: {fileID: 1225787152}
   - component: {fileID: 1225787155}
   m_Layer: 0
-  m_Name: Square (2)
+  m_Name: Via Lactea
   m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1365,7 +1365,7 @@ GameObject:
   - component: {fileID: 1277157214}
   - component: {fileID: 1277157213}
   m_Layer: 0
-  m_Name: Square (6)
+  m_Name: Bernard
   m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1637,12 +1637,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 20
   puntos:
-  - {fileID: 57368434}
-  - {fileID: 1225787153}
-  - {fileID: 605210214}
-  - {fileID: 2017082272}
-  - {fileID: 573640396}
-  - {fileID: 1277157214}
+  - ID: 0
+    transform: {fileID: 57368434}
+  - ID: 1
+    transform: {fileID: 1225787153}
+  - ID: 2
+    transform: {fileID: 605210214}
+  - ID: 3
+    transform: {fileID: 2017082272}
+  - ID: 4
+    transform: {fileID: 573640396}
+  - ID: 5
+    transform: {fileID: 1277157214}
 --- !u!1 &1574573432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,7 +1976,7 @@ GameObject:
   - component: {fileID: 2017082272}
   - component: {fileID: 2017082271}
   m_Layer: 0
-  m_Name: Square (4)
+  m_Name: Andromeda
   m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
