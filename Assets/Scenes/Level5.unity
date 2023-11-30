@@ -13153,6 +13153,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3678586666527051915, guid: 2a8dc780dff855f439594da738b2b189, type: 3}
+      propertyPath: ArrowGO
+      value: 
+      objectReference: {fileID: 4343505757049424114}
+    - target: {fileID: 3678586666527051915, guid: 2a8dc780dff855f439594da738b2b189, type: 3}
       propertyPath: timerText
       value: 
       objectReference: {fileID: 501768120}
@@ -26240,8 +26244,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4494810079155561354, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 986492517}
+    - target: {fileID: 4494810079155561354, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: hideDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+--- !u!1 &4343505757049424114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3705522116472895465, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+  m_PrefabInstance: {fileID: 4343505757049424113}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6954165861613671683
 PrefabInstance:
   m_ObjectHideFlags: 0

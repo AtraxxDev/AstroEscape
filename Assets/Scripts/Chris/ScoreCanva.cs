@@ -71,7 +71,7 @@ public class ScoreCanva : MonoBehaviour
         Time.timeScale = 1f;
 
         // Cambia el número 1 con el índice de la escena que deseas cargar
-        int indiceDeLaOtraEscena = 0;
+        int indiceDeLaOtraEscena = 1;
         SceneManager.LoadScene(indiceDeLaOtraEscena);
     }
 }
