@@ -21,8 +21,8 @@ public class ShipHealth : MonoBehaviour
     {
         if(healthAmount == 0)
         {
-         
-          panelFinal.gameObject.SetActive(true);
+            Time.timeScale = 0f;
+            panelFinal.gameObject.SetActive(true);
             botnCmbioNivel.gameObject.SetActive(true);
         }
     }

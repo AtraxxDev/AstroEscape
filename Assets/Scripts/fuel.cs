@@ -25,9 +25,10 @@ public class fuel : MonoBehaviour
     {
         if (fuelAmount == 0)
         {
-            
+           
             panelFinal.gameObject.SetActive(true);
             botnCmbioNivel.gameObject.SetActive(true);
+            Time.timeScale = 0f;
         }
         {
             
