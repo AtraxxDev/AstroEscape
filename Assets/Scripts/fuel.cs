@@ -23,7 +23,7 @@ public class fuel : MonoBehaviour
 
     void Update()
     {
-        if (fuelAmount == 0)
+        if (fuelAmount <= 0)
         {
            
             panelFinal.gameObject.SetActive(true);

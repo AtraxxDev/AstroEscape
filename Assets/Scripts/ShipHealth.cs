@@ -19,7 +19,7 @@ public class ShipHealth : MonoBehaviour
     }
     private void Update()
     {
-        if(healthAmount == 0)
+        if(healthAmount <= 0)
         {
             Time.timeScale = 0f;
             panelFinal.gameObject.SetActive(true);
