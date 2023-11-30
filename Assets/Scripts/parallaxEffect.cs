@@ -20,6 +20,12 @@ public class parallaxEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ParallaxOffset();
+    }
+
+    private void ParallaxOffset()
+    {
+
         offset.x = cam.position.x / transform.localScale.x / paralax;
         offset.y = cam.position.y / transform.localScale.y / paralax;
 
