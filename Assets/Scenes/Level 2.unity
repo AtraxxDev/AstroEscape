@@ -22630,6 +22630,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 556531968}
     - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: panelFinal
+      value: 
+      objectReference: {fileID: 574050271}
+    - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: botnCmbioNivel
+      value: 
+      objectReference: {fileID: 668041668}
+    - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: healthTexts.Array.data[0]
       value: 
       objectReference: {fileID: 986444483}
@@ -22646,6 +22654,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 117665008}
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: panelFinal
+      value: 
+      objectReference: {fileID: 574050271}
+    - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: botnCmbioNivel
+      value: 
+      objectReference: {fileID: 668041668}
+    - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: PuntuacionTexts.Array.data[0]
       value: 
       objectReference: {fileID: 117665008}
@@ -22653,6 +22669,14 @@ PrefabInstance:
       propertyPath: PuntuacionTexts.Array.data[1]
       value: 
       objectReference: {fileID: 574050273}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: panelFinal
+      value: 
+      objectReference: {fileID: 574050271}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: botnCmbioNivel
+      value: 
+      objectReference: {fileID: 668041668}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: timer_linear_image
       value: 
