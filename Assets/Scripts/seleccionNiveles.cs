@@ -8,6 +8,10 @@ public class seleccionNiveles : MonoBehaviour
     public Transform[] puntos;
     private int indicePuntoActual = 0;
     private bool enMovimientoAutomatico = false;
+    void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     void Update()
     {

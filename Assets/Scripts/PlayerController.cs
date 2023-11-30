@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
         rb = GetComponent<Rigidbody2D>();
 
         rb.gravityScale = 0f;

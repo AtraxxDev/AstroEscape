@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ScoreCanva : MonoBehaviour
 {
@@ -53,5 +54,9 @@ public class ScoreCanva : MonoBehaviour
         {
             Debug.LogError("No se ha asignado el objeto TMP_Text para mostrar el resultado en el Inspector.");
         }
+    }
+    public void CambiarAEscenaOtra()
+    {
+        SceneManager.LoadScene("LevelsSelect");
     }
 }
