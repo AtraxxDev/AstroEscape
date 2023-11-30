@@ -57,6 +57,6 @@ public class ScoreCanva : MonoBehaviour
     }
     public void CambiarAEscenaOtra()
     {
-        SceneManager.LoadScene("LevelsSelect");
+        SceneManager.LoadScene("TestLevel");
     }
 }

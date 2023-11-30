@@ -18,7 +18,7 @@ public class seleccionNiveles : MonoBehaviour
     private bool enMovimientoAutomatico = false;
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
+       
     }
 
     void Update()
