@@ -8655,6 +8655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1571283537}
   - component: {fileID: 1571283538}
+  - component: {fileID: 1571283539}
   m_Layer: 0
   m_Name: FondoNubesCapa
   m_TagString: Untagged
@@ -8670,7 +8671,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571283536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 0.4264, y: 0.1339, z: 10}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8723,12 +8724,25 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 18, y: 10}
+  m_Size: {x: 35.994656, y: 25.931696}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1571283539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571283536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bbbdbda6be3cd140930be91ff473da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paralax: 8
 --- !u!1 &1601259132 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3705522116472895465, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
@@ -9133,6 +9147,7 @@ GameObject:
   - component: {fileID: 1614879698}
   - component: {fileID: 1614879699}
   - component: {fileID: 1614879700}
+  - component: {fileID: 1614879701}
   m_Layer: 0
   m_Name: FondoEstrellasCapa
   m_TagString: Untagged
@@ -9148,7 +9163,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614879697}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 0.4264, y: 0.1339, z: 10}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9201,7 +9216,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 18, y: 10}
+  m_Size: {x: 35.994656, y: 25.931696}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -9214,12 +9229,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614879697}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7273f4f0d8b55234d9694e7bc11220e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
+--- !u!114 &1614879701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614879697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bbbdbda6be3cd140930be91ff473da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paralax: 2
 --- !u!1 &1629278609
 GameObject:
   m_ObjectHideFlags: 0
