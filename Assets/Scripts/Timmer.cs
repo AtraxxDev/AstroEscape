@@ -22,7 +22,7 @@ public class Timmer : MonoBehaviour
         // Asegúrate de que timerTexts esté asignado en el Inspector.
         if (timerTexts == null || timerTexts.Count == 0)
         {
-            Debug.LogError("La lista de objetos TimerText no está asignada en el Inspector o está vacía.");
+           
         }
     }
 

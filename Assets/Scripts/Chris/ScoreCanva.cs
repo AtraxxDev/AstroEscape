@@ -10,6 +10,7 @@ public class ScoreCanva : MonoBehaviour
     public TMP_Text resultadoText;
     public int numeroLimiteDesactivarObjeto = 100; // Establece el número límite en el Inspector
     public string Trofeo12;
+
     void Start()
     {
         if (panelUI != null)
@@ -55,6 +56,7 @@ public class ScoreCanva : MonoBehaviour
             if (sumaTotal > numeroLimiteDesactivarObjeto)
             {
                 // Almacenar la información en PlayerPrefs
+                PlayerPrefs.SetInt("ResultadoTextValor", sumaTotal);
                 PlayerPrefs.SetInt("DesactivarObjeto", 1);
             }
         }
@@ -67,30 +69,9 @@ public class ScoreCanva : MonoBehaviour
     public void CambiarAEscenaOtra()
     {
         Time.timeScale = 1f;
-        // Antes de cambiar la escena, verifica si se debe desactivar el objeto
-        if (PlayerPrefs.GetInt("DesactivarObjeto", 0) == 1)
-        {
-            DesactivarObjetoEnOtraEscena();
-            PlayerPrefs.DeleteKey("DesactivarObjeto"); // Eliminar la clave después de usarla
-        }
 
         // Cambia el número 1 con el índice de la escena que deseas cargar
         int indiceDeLaOtraEscena = 0;
         SceneManager.LoadScene(indiceDeLaOtraEscena);
-    }
-
-    private void DesactivarObjetoEnOtraEscena()
-    {
-        // Buscar el objeto por su nombre único y desactivarlo
-        GameObject objetoADesactivar = GameObject.Find(Trofeo12);
-
-        if (objetoADesactivar != null)
-        {
-            objetoADesactivar.SetActive(false);
-        }
-        else
-        {
-            Debug.LogWarning("No se encontró el objeto a desactivar en la escena.");
-        }
     }
 }

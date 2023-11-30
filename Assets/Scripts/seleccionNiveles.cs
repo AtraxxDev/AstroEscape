@@ -78,7 +78,7 @@ public class seleccionNiveles : MonoBehaviour
         switch (puntos[indicePuntoActual].ID)
         {
             case 1:
-                SceneManager.LoadScene("TestLevel");
+                SceneManager.LoadScene("TrueLevel1");
                 break;
 
             case 2:
