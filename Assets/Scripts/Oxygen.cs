@@ -11,6 +11,8 @@ public class Oxygen : MonoBehaviour
     public float time_remaining;
     private float max_time = 120f;
     public float oxygenRecovery = 15f;
+    public GameObject panelFinal;
+    public GameObject botnCmbioNivel;
 
     private void Start()
     {
@@ -20,6 +22,11 @@ public class Oxygen : MonoBehaviour
 
     private void Update()
     {
+        if(time_remaining == 0)
+        {
+            panelFinal.gameObject.SetActive(true);
+            botnCmbioNivel.gameObject.SetActive(true);
+        }
         if (time_remaining > 0)
         {
             time_remaining -= Time.deltaTime;

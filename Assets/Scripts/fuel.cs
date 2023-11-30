@@ -12,6 +12,8 @@ public class fuel : MonoBehaviour
     public float maxFuel = 300f;
     public float refill = 50f;
     public List<TMP_Text> PuntuacionTexts;
+    public GameObject panelFinal;
+    public GameObject botnCmbioNivel;
 
     void Start()
     {
@@ -21,6 +23,15 @@ public class fuel : MonoBehaviour
 
     void Update()
     {
+        if (fuelAmount == 0)
+        {
+            
+            panelFinal.gameObject.SetActive(true);
+            botnCmbioNivel.gameObject.SetActive(true);
+        }
+        {
+            
+        }
         if (Input.GetKey(KeyCode.W) && fuelAmount > 0)
         {
             fuelAmount -= Time.deltaTime;

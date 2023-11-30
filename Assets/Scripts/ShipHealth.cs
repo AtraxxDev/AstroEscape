@@ -10,7 +10,8 @@ public class ShipHealth : MonoBehaviour
     public Image healthBar;
     public float healthAmount;
     public float maxHealth = 10f;
-    //public GameObject panel;
+    public GameObject panelFinal;
+    public GameObject botnCmbioNivel;
     private void Start()
     {
         healthAmount = Mathf.Clamp(healthAmount, 0, maxHealth);
@@ -20,8 +21,9 @@ public class ShipHealth : MonoBehaviour
     {
         if(healthAmount == 0)
         {
-            Time.timeScale = 0f;
-          //  panel.gameObject.SetActive(true);
+         
+          panelFinal.gameObject.SetActive(true);
+            botnCmbioNivel.gameObject.SetActive(true);
         }
     }
     public void TakeDamage()
