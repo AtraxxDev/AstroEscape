@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class ScoreCanva : MonoBehaviour
 {
-    public GameObject panelUI; 
-    public TMP_Text resultadoText; 
-
+    public GameObject panelUI;
+    public TMP_Text resultadoText;
+    public int numeroLimiteDesactivarObjeto = 100; // Establece el número límite en el Inspector
+    public string Trofeo12;
     void Start()
     {
         if (panelUI != null)
@@ -49,14 +50,47 @@ public class ScoreCanva : MonoBehaviour
             Debug.Log("La suma total de los números en los textos es: " + sumaTotal);
 
             resultadoText.text = "Your score: " + sumaTotal;
+
+            // Verificar si la suma total es mayor al número límite
+            if (sumaTotal > numeroLimiteDesactivarObjeto)
+            {
+                // Almacenar la información en PlayerPrefs
+                PlayerPrefs.SetInt("DesactivarObjeto", 1);
+            }
         }
         else
         {
             Debug.LogError("No se ha asignado el objeto TMP_Text para mostrar el resultado en el Inspector.");
         }
     }
+
     public void CambiarAEscenaOtra()
     {
-        SceneManager.LoadScene("TestLevel");
+        Time.timeScale = 1f;
+        // Antes de cambiar la escena, verifica si se debe desactivar el objeto
+        if (PlayerPrefs.GetInt("DesactivarObjeto", 0) == 1)
+        {
+            DesactivarObjetoEnOtraEscena();
+            PlayerPrefs.DeleteKey("DesactivarObjeto"); // Eliminar la clave después de usarla
+        }
+
+        // Cambia el número 1 con el índice de la escena que deseas cargar
+        int indiceDeLaOtraEscena = 0;
+        SceneManager.LoadScene(indiceDeLaOtraEscena);
+    }
+
+    private void DesactivarObjetoEnOtraEscena()
+    {
+        // Buscar el objeto por su nombre único y desactivarlo
+        GameObject objetoADesactivar = GameObject.Find(Trofeo12);
+
+        if (objetoADesactivar != null)
+        {
+            objetoADesactivar.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró el objeto a desactivar en la escena.");
+        }
     }
 }
