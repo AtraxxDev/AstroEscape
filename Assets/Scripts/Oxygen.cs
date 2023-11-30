@@ -22,10 +22,11 @@ public class Oxygen : MonoBehaviour
 
     private void Update()
     {
-        if(time_remaining == 0)
+        if(time_remaining <= 0)
         {
             panelFinal.gameObject.SetActive(true);
             botnCmbioNivel.gameObject.SetActive(true);
+            Time.timeScale = 0f;
         }
         if (time_remaining > 0)
         {

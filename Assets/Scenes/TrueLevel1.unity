@@ -15633,9 +15633,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1908458115}
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: maxFuel
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: timerText
       value: 
       objectReference: {fileID: 766551167}
+    - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: fuelAmount
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: panelFinal
       value: 
@@ -15660,6 +15668,10 @@ PrefabInstance:
       propertyPath: botnCmbioNivel
       value: 
       objectReference: {fileID: 993571611}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: time_remaining
+      value: 1200
+      objectReference: {fileID: 0}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: timer_linear_image
       value: 
