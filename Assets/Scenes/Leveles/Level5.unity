@@ -13305,6 +13305,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2087747427}
     - target: {fileID: 3678586666527051915, guid: 2a8dc780dff855f439594da738b2b189, type: 3}
+      propertyPath: colliderPortal
+      value: 
+      objectReference: {fileID: 2087747427}
+    - target: {fileID: 3678586666527051915, guid: 2a8dc780dff855f439594da738b2b189, type: 3}
       propertyPath: timerTexts.Array.data[0]
       value: 
       objectReference: {fileID: 1829706825}
@@ -26610,11 +26614,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2043989825}
     - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
-      propertyPath: panelFinal
+      propertyPath: finalPanel
       value: 
       objectReference: {fileID: 1829706827}
     - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
-      propertyPath: botnCmbioNivel
+      propertyPath: changeSceneButton
       value: 
       objectReference: {fileID: 657215964}
     - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
@@ -26634,39 +26638,39 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 766551167}
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
-      propertyPath: panelFinal
+      propertyPath: finalpanel
       value: 
       objectReference: {fileID: 1829706827}
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
-      propertyPath: botnCmbioNivel
+      propertyPath: changeSceneButton
       value: 
       objectReference: {fileID: 657215964}
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
-      propertyPath: PuntuacionTexts.Array.data[0]
+      propertyPath: puntuationText.Array.data[0]
       value: 
       objectReference: {fileID: 766551167}
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
-      propertyPath: PuntuacionTexts.Array.data[1]
+      propertyPath: puntuationText.Array.data[1]
       value: 
       objectReference: {fileID: 616108044}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
-      propertyPath: panelFinal
+      propertyPath: finalPanel
       value: 
       objectReference: {fileID: 1829706827}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
-      propertyPath: botnCmbioNivel
-      value: 
-      objectReference: {fileID: 657215964}
-    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
-      propertyPath: timer_linear_image
+      propertyPath: timerLinearImage
       value: 
       objectReference: {fileID: 1927601704}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
-      propertyPath: OxygenTexts.Array.data[0]
+      propertyPath: changeSceneButton
+      value: 
+      objectReference: {fileID: 657215964}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: oxygenTexts.Array.data[0]
       value: 
       objectReference: {fileID: 1651323289}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
-      propertyPath: OxygenTexts.Array.data[1]
+      propertyPath: oxygenTexts.Array.data[1]
       value: 
       objectReference: {fileID: 732469535}
     - target: {fileID: 855590070, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
@@ -26725,10 +26729,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 986492517}
-    - target: {fileID: 4494810079155561354, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
-      propertyPath: hideDistance
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
 --- !u!1 &4343505757049424114 stripped

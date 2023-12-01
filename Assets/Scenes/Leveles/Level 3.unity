@@ -5666,7 +5666,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: f3832b8ec825c3c47b3ccd7e2164aa9c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -5761,11 +5761,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
+  m_fontSize: 10.7
   m_fontSizeBase: 12
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 8
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -15682,7 +15682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1177606502
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15699,10 +15699,10 @@ RectTransform:
   m_Father: {fileID: 1811641993}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: -184}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 7.1146, y: 23.4335}
+  m_SizeDelta: {x: 113.318, y: 24.2672}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1177606503
 MonoBehaviour:
@@ -15748,9 +15748,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1782703269}
         m_TargetAssemblyTypeName: ScoreCanva, Assembly-CSharp
-        m_MethodName: CambiarAEscenaOtra
+        m_MethodName: ChangeScenes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19000,17 +19000,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1641271581 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7894587411467313261, guid: b63b84badb580d8449e031ca6e6fd72b, type: 3}
-  m_PrefabInstance: {fileID: 1641271577}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1651821261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20542,6 +20531,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4237930526938395794, guid: 82188fb29946347428aa94b448b3dcbc, type: 3}
   m_PrefabInstance: {fileID: 1752128302}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1782703269 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6288858454353770983, guid: 23beed82d0616c7479d94dc06d658053, type: 3}
+  m_PrefabInstance: {fileID: 1667936066}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111382564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ebc0fce9bf30b4f87ebd611d3636ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1784864326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23603,6 +23603,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 520450021666856551, guid: dda21c0389fcf3140bfa2da5f2521aa4, type: 3}
   m_PrefabInstance: {fileID: 1987792492}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2027071200 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7894587411119102482, guid: b63b84badb580d8449e031ca6e6fd72b, type: 3}
+  m_PrefabInstance: {fileID: 1641271577}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2076529169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24403,11 +24414,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1641271579}
     - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: finalPanel
+      value: 
+      objectReference: {fileID: 1111382564}
+    - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: panelFinal
       value: 
       objectReference: {fileID: 1111382564}
     - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: botnCmbioNivel
+      value: 
+      objectReference: {fileID: 1177606501}
+    - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: changeSceneButton
       value: 
       objectReference: {fileID: 1177606501}
     - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
@@ -24421,11 +24440,15 @@ PrefabInstance:
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: fuelBar
       value: 
-      objectReference: {fileID: 1641271581}
+      objectReference: {fileID: 2027071200}
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: timerText
       value: 
       objectReference: {fileID: 295108602}
+    - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: finalpanel
+      value: 
+      objectReference: {fileID: 1111382564}
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: panelFinal
       value: 
@@ -24455,11 +24478,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1667936069}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: finalPanel
+      value: 
+      objectReference: {fileID: 1111382564}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: panelFinal
       value: 
       objectReference: {fileID: 1111382564}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: botnCmbioNivel
+      value: 
+      objectReference: {fileID: 1177606501}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: timerLinearImage
+      value: 
+      objectReference: {fileID: 1641271580}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: changeSceneButton
       value: 
       objectReference: {fileID: 1177606501}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
