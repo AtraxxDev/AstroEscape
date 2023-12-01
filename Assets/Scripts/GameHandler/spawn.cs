@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class spawn : MonoBehaviour
 {
-    public GameObject objetoPrefab; 
+    public GameObject objectPrefab; 
     public float minY = 1.0f;
     public float maxY = 5.0f; 
-    public float tiempoDeSpawn;
+    public float spawnTime;
     public float maxTime;
     public float minTime;
 
@@ -17,11 +17,11 @@ public class spawn : MonoBehaviour
     {
         tiempoTranscurrido += Time.deltaTime;
 
-        if (tiempoTranscurrido >= tiempoDeSpawn)
+        if (tiempoTranscurrido >= spawnTime)
         {
             SpawnObject();
             tiempoTranscurrido = 0.0f;
-            tiempoDeSpawn = Random.Range(minTime, maxTime);
+            spawnTime = Random.Range(minTime, maxTime);
 
         }
     }
@@ -33,7 +33,7 @@ public class spawn : MonoBehaviour
 
         
         Vector3 spawnPosition = new Vector3(transform.position.x, randomY, transform.position.z);
-        Instantiate(objetoPrefab, spawnPosition, Quaternion.identity);
+        Instantiate(objectPrefab, spawnPosition, Quaternion.identity);
     }
 
 
