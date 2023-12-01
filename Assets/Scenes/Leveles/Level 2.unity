@@ -3376,6 +3376,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2013077046}
     - target: {fileID: 3678586666527051915, guid: 2a8dc780dff855f439594da738b2b189, type: 3}
+      propertyPath: colliderPortal
+      value: 
+      objectReference: {fileID: 2013077046}
+    - target: {fileID: 3678586666527051915, guid: 2a8dc780dff855f439594da738b2b189, type: 3}
       propertyPath: timerTexts.Array.data[0]
       value: 
       objectReference: {fileID: 1331831930}
@@ -8568,7 +8572,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1245794748}
         m_TargetAssemblyTypeName: ScoreCanva, Assembly-CSharp
-        m_MethodName: CambiarAEscenaOtra
+        m_MethodName: ChangeScenes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23322,11 +23326,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 556531968}
     - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: finalPanel
+      value: 
+      objectReference: {fileID: 574050271}
+    - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: panelFinal
       value: 
       objectReference: {fileID: 574050271}
     - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: botnCmbioNivel
+      value: 
+      objectReference: {fileID: 668041668}
+    - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: changeSceneButton
       value: 
       objectReference: {fileID: 668041668}
     - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
@@ -23346,6 +23358,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 117665008}
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: finalpanel
+      value: 
+      objectReference: {fileID: 574050271}
+    - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: panelFinal
       value: 
       objectReference: {fileID: 574050271}
@@ -23358,6 +23374,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 668041668}
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: puntuationText.Array.data[0]
+      value: 
+      objectReference: {fileID: 117665008}
+    - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: puntuationText.Array.data[1]
+      value: 
+      objectReference: {fileID: 574050273}
+    - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: PuntuacionTexts.Array.data[0]
       value: 
       objectReference: {fileID: 117665008}
@@ -23366,6 +23390,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 574050273}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: finalPanel
+      value: 
+      objectReference: {fileID: 574050271}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: panelFinal
       value: 
       objectReference: {fileID: 574050271}
@@ -23373,6 +23401,10 @@ PrefabInstance:
       propertyPath: botnCmbioNivel
       value: 
       objectReference: {fileID: 668041668}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: timerLinearImage
+      value: 
+      objectReference: {fileID: 374741099}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: changeSceneButton
       value: 
@@ -23387,6 +23419,14 @@ PrefabInstance:
       objectReference: {fileID: 1241275042}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: OxygenTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 574050272}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: oxygenTexts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1241275042}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: oxygenTexts.Array.data[1]
       value: 
       objectReference: {fileID: 574050272}
     - target: {fileID: 855590070, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
