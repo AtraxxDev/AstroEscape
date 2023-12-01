@@ -6762,7 +6762,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1829706828}
         m_TargetAssemblyTypeName: ScoreCanva, Assembly-CSharp
-        m_MethodName: CambiarAEscenaOtra
+        m_MethodName: ChangeScenes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6817,7 +6817,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993571611}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6826,10 +6826,10 @@ RectTransform:
   m_Father: {fileID: 817510330}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: -184}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 4.199997, y: 21.5}
+  m_SizeDelta: {x: 110.5234, y: 18.9467}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1004192865
 GameObject:
@@ -12683,11 +12683,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
+  m_fontSize: 8.35
   m_fontSizeBase: 12
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 8
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -15183,6 +15183,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 993571611}
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: puntuationText.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: puntuationText.Array.data[0]
+      value: 
+      objectReference: {fileID: 766551167}
+    - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: puntuationText.Array.data[1]
+      value: 
+      objectReference: {fileID: 616108044}
+    - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: PuntuacionTexts.Array.data[0]
       value: 
       objectReference: {fileID: 766551167}
@@ -15203,15 +15215,31 @@ PrefabInstance:
       value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: timerLinearImage
+      value: 
+      objectReference: {fileID: 1927601704}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: timer_linear_image
       value: 
       objectReference: {fileID: 1927601704}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: oxygenTexts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: OxygenTexts.Array.data[0]
       value: 
       objectReference: {fileID: 1651323289}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: OxygenTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 732469535}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: oxygenTexts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1651323289}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: oxygenTexts.Array.data[1]
       value: 
       objectReference: {fileID: 732469535}
     - target: {fileID: 855590070, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
