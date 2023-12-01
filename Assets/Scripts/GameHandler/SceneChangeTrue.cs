@@ -5,12 +5,34 @@ using UnityEngine.SceneManagement;
 
 public class SceneChangeTrue : MonoBehaviour
 {
-    public  void ChangeEscene()
+    public AudioSource buttonPlay;
+    public AudioSource MusicBG;
+    public void StartGame()
     {
-        
-        int indiceDeLaOtraEscena = 0;
+        StartCoroutine(StartG());
+    }
 
-        SceneManager.LoadScene(indiceDeLaOtraEscena);
+    public void ReturnMenu()
+    {
+        SceneManager.LoadScene("MenuP");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    IEnumerator StartG()
+    {
+        MusicBG.Stop();
+
+        if (buttonPlay != null)
+        {
+            buttonPlay.Play();
+        }
+
+        yield return new WaitForSeconds(buttonPlay.clip.length);
+        SceneManager.LoadScene("LevelSelect");
     }
 
 }
