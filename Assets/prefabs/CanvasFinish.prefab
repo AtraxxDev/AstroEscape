@@ -773,7 +773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelUI: {fileID: 6288858454353770979}
-  textResult: {fileID: 0}
+  textResult: {fileID: 6288858453869219046}
   limitNum: 100
   trophe12: 
 --- !u!1 &6288858454872990126

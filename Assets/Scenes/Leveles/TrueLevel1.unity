@@ -7105,6 +7105,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2087747427}
     - target: {fileID: 3678586666527051915, guid: 2a8dc780dff855f439594da738b2b189, type: 3}
+      propertyPath: colliderPortal
+      value: 
+      objectReference: {fileID: 2087747427}
+    - target: {fileID: 3678586666527051915, guid: 2a8dc780dff855f439594da738b2b189, type: 3}
       propertyPath: timerTexts.Array.data[0]
       value: 
       objectReference: {fileID: 1829706825}
@@ -10465,22 +10469,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RefilGasolina (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8568932883577040069, guid: fa373a7a798556e4b8ea326515c1d978, type: 3}
-      propertyPath: m_Size.x
-      value: 1.2947845
-      objectReference: {fileID: 0}
-    - target: {fileID: 8568932883577040069, guid: fa373a7a798556e4b8ea326515c1d978, type: 3}
-      propertyPath: m_Size.y
-      value: 1.7001953
-      objectReference: {fileID: 0}
-    - target: {fileID: 8568932883577040069, guid: fa373a7a798556e4b8ea326515c1d978, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.105278015
-      objectReference: {fileID: 0}
-    - target: {fileID: 8568932883577040069, guid: fa373a7a798556e4b8ea326515c1d978, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.13686371
-      objectReference: {fileID: 0}
     - target: {fileID: 8568932883577040071, guid: fa373a7a798556e4b8ea326515c1d978, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -13128,6 +13116,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ebc0fce9bf30b4f87ebd611d3636ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1829706829 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6288858455261019898, guid: 23beed82d0616c7479d94dc06d658053, type: 3}
+  m_PrefabInstance: {fileID: 1829706824}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1831440885 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 798695407171492847, guid: 7b732adb75496484a9d1e446f96ce471, type: 3}
@@ -15143,11 +15136,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2043989825}
     - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: finalPanel
+      value: 
+      objectReference: {fileID: 1829706829}
+    - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: panelFinal
       value: 
       objectReference: {fileID: 1829706827}
     - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: botnCmbioNivel
+      value: 
+      objectReference: {fileID: 993571611}
+    - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: changeSceneButton
       value: 
       objectReference: {fileID: 993571611}
     - target: {fileID: 277438082, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
@@ -15171,6 +15172,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 766551167}
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: finalpanel
+      value: 
+      objectReference: {fileID: 1829706829}
+    - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: fuelAmount
       value: 300
       objectReference: {fileID: 0}
@@ -15180,6 +15185,10 @@ PrefabInstance:
       objectReference: {fileID: 1829706827}
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: botnCmbioNivel
+      value: 
+      objectReference: {fileID: 993571611}
+    - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: changeSceneButton
       value: 
       objectReference: {fileID: 993571611}
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
@@ -15203,6 +15212,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 616108044}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: finalPanel
+      value: 
+      objectReference: {fileID: 1829706829}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: panelFinal
       value: 
       objectReference: {fileID: 1829706827}
@@ -15218,6 +15231,10 @@ PrefabInstance:
       propertyPath: timerLinearImage
       value: 
       objectReference: {fileID: 1927601704}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: changeSceneButton
+      value: 
+      objectReference: {fileID: 993571611}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: timer_linear_image
       value: 
