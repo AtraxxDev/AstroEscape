@@ -12,10 +12,6 @@ public class ZoomOutCam : MonoBehaviour
 
     private bool isInTrigger = false;
     private float timeSinceExitTrigger = 0f;
-    private void Start()
-    {
-       
-    }
 
     void Update()
     {

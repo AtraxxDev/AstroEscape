@@ -11,16 +11,16 @@ public class spawn : MonoBehaviour
     public float maxTime;
     public float minTime;
 
-    private float tiempoTranscurrido = 0.0f;
+    private float timePassed = 0.0f;
 
     void Update()
     {
-        tiempoTranscurrido += Time.deltaTime;
+        timePassed += Time.deltaTime;
 
-        if (tiempoTranscurrido >= spawnTime)
+        if (timePassed >= spawnTime)
         {
             SpawnObject();
-            tiempoTranscurrido = 0.0f;
+            timePassed = 0.0f;
             spawnTime = Random.Range(minTime, maxTime);
 
         }

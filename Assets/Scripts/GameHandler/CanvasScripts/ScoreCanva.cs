@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 public class ScoreCanva : MonoBehaviour
 {
     public GameObject panelUI;
-    public TMP_Text resultadoText;
-    public int numeroLimiteDesactivarObjeto = 100; // Establece el número límite en el Inspector
-    public string Trofeo12;
+    public TMP_Text textResult;
+    public int limitNum = 100; // Establece el número límite en el Inspector
+    public string trophe12;
 
     void Start()
     {
@@ -23,13 +23,13 @@ public class ScoreCanva : MonoBehaviour
     {
         if (panelUI != null && panelUI.activeSelf)
         {
-            SumarNumerosEnTextos();
+            TotalTextNumbers();
         }
     }
 
-    void SumarNumerosEnTextos()
+    void TotalTextNumbers()
     {
-        if (resultadoText != null)
+        if (textResult != null)
         {
             TMP_Text[] textosEnPanel = panelUI.GetComponentsInChildren<TMP_Text>();
 
@@ -50,10 +50,10 @@ public class ScoreCanva : MonoBehaviour
 
             Debug.Log("La suma total de los números en los textos es: " + sumaTotal);
 
-            resultadoText.text = "Your score: " + sumaTotal;
+            textResult.text = "Your score: " + sumaTotal;
 
             // Verificar si la suma total es mayor al número límite
-            if (sumaTotal > numeroLimiteDesactivarObjeto)
+            if (sumaTotal > limitNum)
             {
                 // Almacenar la información en PlayerPrefs
                 PlayerPrefs.SetInt("ResultadoTextValor", sumaTotal);
@@ -66,7 +66,7 @@ public class ScoreCanva : MonoBehaviour
         }
     }
 
-    public void CambiarAEscenaOtra()
+    public void ChangeScenes()
     {
         Time.timeScale = 1f;
 

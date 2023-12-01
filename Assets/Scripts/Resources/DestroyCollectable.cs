@@ -4,23 +4,13 @@ using UnityEngine;
 
 public class DestroyCollectable : MonoBehaviour
 {
-    public GameObject Collectable;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject collectable;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Destroy(Collectable);
+            Destroy(collectable);
         }
     }
 }

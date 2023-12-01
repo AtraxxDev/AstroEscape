@@ -11,7 +11,7 @@ public class Oxygen : MonoBehaviour
     public float timeRemaining;
     private float maxTime = 120f;
     public float oxygenRecovery = 15f;
-    public GameObject panelFinal;
+    public GameObject finalPanel;
     public GameObject changeSceneButton;
 
     private void Start()
@@ -24,7 +24,7 @@ public class Oxygen : MonoBehaviour
     {
         if(timeRemaining <= 0)
         {
-            panelFinal.gameObject.SetActive(true);
+            finalPanel.gameObject.SetActive(true);
             changeSceneButton.gameObject.SetActive(true);
             Time.timeScale = 0f;
         }

@@ -4,18 +4,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [System.Serializable]
-public class Punto
+public class Point
 {
     public int ID;
     public Transform transform;
 }
 
-public class seleccionNiveles : MonoBehaviour
+public class LevelSelector : MonoBehaviour
 {
-    public float velocidad = 5f;
-    public Punto[] puntos;
-    private int indicePuntoActual = 0;
-    private bool enMovimientoAutomatico = false;
+    public float speed = 5f;
+    public Point[] points;
+    private int currentIndex = 0;
+    private bool automaticMovement = false;
+    
     void Start()
     {
         Time.timeScale = 1f;
@@ -23,59 +24,59 @@ public class seleccionNiveles : MonoBehaviour
 
     void Update()
     {
-        if (puntos.Length == 0)
+        if (points.Length == 0)
         {
             Debug.LogWarning("No hay puntos especificados.");
             return;
         }
 
-        if (!enMovimientoAutomatico)
+        if (!automaticMovement)
         {
             if (Input.GetKeyDown(KeyCode.D))
             {
-                if (indicePuntoActual < puntos.Length - 1)
+                if (currentIndex < points.Length - 1)
                 {
-                    indicePuntoActual++;
-                    enMovimientoAutomatico = true;
+                    currentIndex++;
+                    automaticMovement = true;
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.A) && indicePuntoActual > 0)
+            if (Input.GetKeyDown(KeyCode.A) && currentIndex > 0)
             {
-                indicePuntoActual--;
-                enMovimientoAutomatico = true;
+               currentIndex--;
+                automaticMovement = true;
             }
 
             // Verificar si está en el punto y presiona la tecla "E"
-            if (Input.GetKeyDown(KeyCode.E) && EstaEnElPunto())
+            if (Input.GetKeyDown(KeyCode.E) && OnPoint())
             {
-                CambiarEscena();
+                ChangeScene();
             }
         }
         else
         {
-            Vector3 direccion = puntos[indicePuntoActual].transform.position - transform.position;
+            Vector3 direccion = points[currentIndex].transform.position - transform.position;
             direccion.Normalize();
 
-            transform.Translate(direccion * velocidad * Time.deltaTime);
+            transform.Translate(direccion * speed * Time.deltaTime);
 
-            if (Vector3.Distance(transform.position, puntos[indicePuntoActual].transform.position) < 0.1f)
+            if (Vector3.Distance(transform.position, points[currentIndex].transform.position) < 0.1f)
             {
-                enMovimientoAutomatico = false;
+                automaticMovement = false;
             }
         }
     }
 
-    bool EstaEnElPunto()
+    bool OnPoint()
     {
-        float distanciaAlPunto = Vector3.Distance(transform.position, puntos[indicePuntoActual].transform.position);
+        float distanciaAlPunto = Vector3.Distance(transform.position, points[currentIndex].transform.position);
         return distanciaAlPunto < 0.1f;
     }
 
-    void CambiarEscena()
+    void ChangeScene()
     {
         // Utilizar switch para manejar diferentes casos según el ID
-        switch (puntos[indicePuntoActual].ID)
+        switch (points[currentIndex].ID)
         {
             case 1:
                 SceneManager.LoadScene("TrueLevel1");
@@ -99,7 +100,7 @@ public class seleccionNiveles : MonoBehaviour
 
             default:
                 Debug.Log("Spawn");
-                Debug.LogWarning("ID no manejado: " + puntos[indicePuntoActual].ID);
+                Debug.LogWarning("ID no manejado: " + points[currentIndex].ID);
                 break;
         }
     }

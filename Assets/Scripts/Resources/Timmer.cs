@@ -11,7 +11,7 @@ public class Timmer : MonoBehaviour
     private float currentTime;
     private bool isRunning = false;
     public List<TMP_Text> timerTexts; // Cambiado a una lista para permitir múltiples objetos TMP_Text.
-    public GameObject ColliderPortal;
+    public GameObject colliderPortal;
 
     private void Start()
     {
@@ -52,7 +52,7 @@ public class Timmer : MonoBehaviour
         UpdateTimerText();
     }
 
-    public void GuardarTime()
+    public void LogTime()
     {
         Debug.Log(currentTime);
     }
@@ -61,7 +61,7 @@ public class Timmer : MonoBehaviour
     {
         foreach (TMP_Text text in timerTexts)
         {
-            text.text = "Tiempo: " + currentTime.ToString("F2");
+            text.text = "Time: " + currentTime.ToString("F2");
         }
     }
 
@@ -70,8 +70,8 @@ public class Timmer : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             StopTimer();
-            GuardarTime();
-            ColliderPortal.SetActive(true);
+            LogTime();
+            colliderPortal.SetActive(true);
             ArrowGO.SetActive(true);
             Destroy(gameObject);
         }

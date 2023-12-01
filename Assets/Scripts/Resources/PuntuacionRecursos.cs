@@ -8,18 +8,7 @@ public class PuntuacionRecursos : MonoBehaviour
     public TMP_Text fuelText;
     private fuel _fuel;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-    private void PuntuacionFinal()
+    private void FinalScore()
     {
         if (_fuel.timerText)
         {

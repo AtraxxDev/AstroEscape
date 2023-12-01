@@ -8,11 +8,11 @@ public class FinalLevel : MonoBehaviour
     public GameObject panel;
     public GameObject botn;
 
-    private bool tiempoDetenido = false;
+    private bool timeStopped = false;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && !tiempoDetenido)
+        if (collision.gameObject.CompareTag("Player") && !timeStopped)
         {
             Time.timeScale = 0f;
             panel.gameObject.SetActive(true);
@@ -22,12 +22,12 @@ public class FinalLevel : MonoBehaviour
             // Pero no restablecerlo aquí, ya que queremos mantenerlo detenido hasta que se cargue la nueva escena
             // Time.timeScale = 1f;
 
-            tiempoDetenido = true;
+            timeStopped = true;
         }
     }
 
     // Función para cargar la nueva escena
-    public void CargarNuevaEscena()
+    public void LoadNewScene()
     {
         // Restablecer el tiempo antes de cargar la nueva escena
         Time.timeScale = 1f;

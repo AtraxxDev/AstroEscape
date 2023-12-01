@@ -12,7 +12,7 @@ public class fuel : MonoBehaviour
     public float maxFuel = 300f;
     public float refill = 50f;
     public List<TMP_Text> puntuationText;
-    public GameObject panelFinal;
+    public GameObject finalpanel;
     public GameObject changeSceneButton;
 
     void Start()
@@ -26,7 +26,7 @@ public class fuel : MonoBehaviour
         if (fuelAmount <= 0)
         {
            
-            panelFinal.gameObject.SetActive(true);
+            finalpanel.gameObject.SetActive(true);
             changeSceneButton.gameObject.SetActive(true);
             Time.timeScale = 0f;
         }

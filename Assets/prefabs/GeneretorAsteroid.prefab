@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 246da0dabdd1fac48aea6eb1137ad2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetoPrefab: {fileID: 9050979699341968963, guid: bcaeee37a816db14f82146d1db11eccf, type: 3}
+  objectPrefab: {fileID: 9050979699341968963, guid: bcaeee37a816db14f82146d1db11eccf, type: 3}
   minY: 8.43
   maxY: 2.85
-  tiempoDeSpawn: 5
+  spawnTime: 0
   maxTime: 1
   minTime: 3

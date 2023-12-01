@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-public class Desaparecer : MonoBehaviour
+public class Dissapear : MonoBehaviour
 {
-    public int valorLimite = 500;
-    public GameObject objetoADesactivar;
+    public int limit = 500;
+    public GameObject deactivateObj;
 
     void Start()
     {
@@ -14,11 +14,11 @@ public class Desaparecer : MonoBehaviour
         int resultadoTextValor = PlayerPrefs.GetInt("ResultadoTextValor", 0);
 
         // Verificar si el valor es mayor a 500 y desactivar el objeto
-        if (resultadoTextValor > valorLimite)
+        if (resultadoTextValor > limit)
         {
-            if (objetoADesactivar != null)
+            if (deactivateObj != null)
             {
-                objetoADesactivar.SetActive(false);
+                deactivateObj.SetActive(false);
             }
             else
             {
