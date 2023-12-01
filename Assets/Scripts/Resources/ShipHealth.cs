@@ -10,20 +10,20 @@ public class ShipHealth : MonoBehaviour
     public Image healthBar;
     public float healthAmount;
     public float maxHealth = 10f;
-    public GameObject panelFinal;
-    public GameObject botnCmbioNivel;
+    public GameObject finalPanel;
+    public GameObject changeSceneButton;
     private void Start()
     {
         healthAmount = Mathf.Clamp(healthAmount, 0, maxHealth);
-        ActualizarPuntuacion();
+        UpdateScore();
     }
     private void Update()
     {
         if(healthAmount <= 0)
         {
             Time.timeScale = 0f;
-            panelFinal.gameObject.SetActive(true);
-            botnCmbioNivel.gameObject.SetActive(true);
+            finalPanel.gameObject.SetActive(true);
+            changeSceneButton.gameObject.SetActive(true);
         }
     }
     public void TakeDamage()
@@ -31,7 +31,7 @@ public class ShipHealth : MonoBehaviour
         healthAmount -= 1f;
         healthAmount = Mathf.Clamp(healthAmount, 0, maxHealth);
         healthBar.fillAmount = healthAmount / maxHealth;
-        ActualizarPuntuacion();
+        UpdateScore();
     }
 
     public void HealAmount(float healingAmount)
@@ -39,7 +39,7 @@ public class ShipHealth : MonoBehaviour
         healthAmount += healingAmount;
         healthAmount = Mathf.Clamp(healthAmount, 0, maxHealth);
         healthBar.fillAmount = healthAmount / maxHealth;
-        ActualizarPuntuacion();
+        UpdateScore();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -47,31 +47,31 @@ public class ShipHealth : MonoBehaviour
         TakeDamage();
     }
 
-    private void ActualizarPuntuacion()
+    private void UpdateScore()
     {
-        int puntuacion = 0;
+        int puntuation = 0;
 
         if (healthAmount <= 3)
         {
-            puntuacion = 250;
+            puntuation = 250;
         }
         else if (healthAmount <= 5)
         {
-            puntuacion = 500;
+            puntuation = 500;
         }
         else if (healthAmount <= 10)
         {
-            puntuacion = 1000;
+            puntuation  = 1000;
         }
 
-        SetPuntuacion(puntuacion);
+        SetScore(puntuation);
     }
 
-    private void SetPuntuacion(int puntuacion)
+    private void SetScore(int puntuation)
     {
         foreach (TMP_Text text in healthTexts)
         {
-            text.text = puntuacion.ToString();
+            text.text = puntuation.ToString();
         }
     }
 }

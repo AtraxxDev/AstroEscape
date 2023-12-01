@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ChangeSceneMenu : MonoBehaviour
 {
     public AudioSource buttonPlay;
-    public AudioSource MusicBG;
+    public AudioSource musicBG;
     public void StartGame()
     {
         StartCoroutine(StartG());
@@ -24,7 +24,7 @@ public class ChangeSceneMenu : MonoBehaviour
 
     IEnumerator StartG()
     {
-        MusicBG.Stop();
+        musicBG.Stop();
 
         if (buttonPlay != null) 
         {

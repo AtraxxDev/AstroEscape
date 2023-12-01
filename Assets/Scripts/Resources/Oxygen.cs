@@ -6,55 +6,55 @@ using TMPro;
 
 public class Oxygen : MonoBehaviour
 {
-    public List<TMP_Text> OxygenTexts;
-    public Image timer_linear_image;
-    public float time_remaining;
-    private float max_time = 120f;
+    public List<TMP_Text> oxygenTexts;
+    public Image timerLinearImage;
+    public float timeRemaining;
+    private float maxTime = 120f;
     public float oxygenRecovery = 15f;
     public GameObject panelFinal;
-    public GameObject botnCmbioNivel;
+    public GameObject changeSceneButton;
 
     private void Start()
     {
-        time_remaining = Mathf.Clamp(time_remaining, 0f, max_time);
-        timer_linear_image.fillAmount = time_remaining / max_time;
+        timeRemaining = Mathf.Clamp(timeRemaining, 0f, maxTime);
+        timerLinearImage.fillAmount = timeRemaining / maxTime;
     }
 
     private void Update()
     {
-        if(time_remaining <= 0)
+        if(timeRemaining <= 0)
         {
             panelFinal.gameObject.SetActive(true);
-            botnCmbioNivel.gameObject.SetActive(true);
+            changeSceneButton.gameObject.SetActive(true);
             Time.timeScale = 0f;
         }
-        if (time_remaining > 0)
+        if (timeRemaining > 0)
         {
-            time_remaining -= Time.deltaTime;
-            timer_linear_image.fillAmount = time_remaining / max_time;
+            timeRemaining -= Time.deltaTime;
+            timerLinearImage.fillAmount = timeRemaining / maxTime;
         }
 
-        PuntuacionOxygen();
+        OxygenScore();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("oxigeno"))
         {
-            time_remaining += oxygenRecovery;
-            time_remaining = Mathf.Clamp(time_remaining, 0f, max_time);
+            timeRemaining += oxygenRecovery;
+            timeRemaining = Mathf.Clamp(timeRemaining, 0f, maxTime);
         }
     }
 
-    public void PuntuacionOxygen()
+    public void OxygenScore()
     {
         int oxygen = 0;
 
-        if (time_remaining <= 40)
+        if (timeRemaining <= 40)
         {
             oxygen = 250;
         }
-        else if (time_remaining <= 80)
+        else if (timeRemaining <= 80)
         {
             oxygen = 500;
         }
@@ -63,12 +63,12 @@ public class Oxygen : MonoBehaviour
             oxygen = 1000;
         }
 
-        SetPuntuacion(oxygen);
+        SetPuntuation(oxygen);
     }
 
-    private void SetPuntuacion(int puntuacion)
+    private void SetPuntuation(int puntuacion)
     {
-        foreach (TMP_Text text in OxygenTexts)
+        foreach (TMP_Text text in oxygenTexts)
         {
             text.text = puntuacion.ToString();
         }

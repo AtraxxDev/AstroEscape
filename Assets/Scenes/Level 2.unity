@@ -23334,6 +23334,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 668041668}
     - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: changeSceneButton
+      value: 
+      objectReference: {fileID: 668041668}
+    - target: {fileID: 277438083, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: PuntuacionTexts.Array.data[0]
       value: 
       objectReference: {fileID: 117665008}
@@ -23347,6 +23351,10 @@ PrefabInstance:
       objectReference: {fileID: 574050271}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: botnCmbioNivel
+      value: 
+      objectReference: {fileID: 668041668}
+    - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: changeSceneButton
       value: 
       objectReference: {fileID: 668041668}
     - target: {fileID: 277438084, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}

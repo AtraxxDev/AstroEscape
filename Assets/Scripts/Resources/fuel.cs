@@ -11,14 +11,14 @@ public class fuel : MonoBehaviour
     public float fuelAmount;
     public float maxFuel = 300f;
     public float refill = 50f;
-    public List<TMP_Text> PuntuacionTexts;
+    public List<TMP_Text> puntuationText;
     public GameObject panelFinal;
-    public GameObject botnCmbioNivel;
+    public GameObject changeSceneButton;
 
     void Start()
     {
         fuelAmount = Mathf.Clamp(fuelAmount, 0f, maxFuel);
-        ActualizarPuntuacion();
+        UpdateScore();
     }
 
     void Update()
@@ -27,7 +27,7 @@ public class fuel : MonoBehaviour
         {
            
             panelFinal.gameObject.SetActive(true);
-            botnCmbioNivel.gameObject.SetActive(true);
+            changeSceneButton.gameObject.SetActive(true);
             Time.timeScale = 0f;
         }
         {
@@ -37,14 +37,14 @@ public class fuel : MonoBehaviour
         {
             fuelAmount -= Time.deltaTime;
             fuelBar.fillAmount = fuelAmount / maxFuel;
-            Puntuacionfuel();
+            PuntuationFuel();
         }
         if (Input.GetKey(KeyCode.Space))
         {
             fuelAmount -= Time.deltaTime * 50;
             fuelAmount = Mathf.Clamp(fuelAmount, 0f, maxFuel);
             fuelBar.fillAmount = fuelAmount / maxFuel;
-            Puntuacionfuel();
+            PuntuationFuel();
         }
     }
 
@@ -54,33 +54,33 @@ public class fuel : MonoBehaviour
         {
             fuelAmount += refill;
             fuelAmount = Mathf.Clamp(fuelAmount, 0f, maxFuel);
-            ActualizarPuntuacion();
+            UpdateScore();
         }
     }
 
-    private void Puntuacionfuel()
+    private void PuntuationFuel()
     {
         if (fuelAmount <= 300 && fuelAmount > 150)
         {
-            ActualizarPuntuacion(1000);
+            UpdateScore(1000);
         }
         else if (fuelAmount <= 150 && fuelAmount > 50)
         {
-            ActualizarPuntuacion(500);
+            UpdateScore(500);
         }
         else if (fuelAmount <= 50)
         {
-            ActualizarPuntuacion(250);
+            UpdateScore(250);
         }
         else
         {
-            ActualizarPuntuacion(0);
+            UpdateScore(0);
         }
     }
 
-    private void ActualizarPuntuacion(int puntuacion = 0)
+    private void UpdateScore(int puntuacion = 0)
     {
-        foreach (TMP_Text text in PuntuacionTexts)
+        foreach (TMP_Text text in puntuationText)
         {
             text.text =  puntuacion.ToString();
         }

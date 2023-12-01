@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float rotationalSpeed = 0.5f;
-    public float maxAngularVelocity = 5f;  // Nueva variable para limitar la velocidad angular
+    public float maxangularVelocity = 5f;  // Nueva variable para limitar la velocidad angular
     public float thrustForce = 0.5f;
     public float turboMultiplier = 2.0f;
     public float brakeForce = 0.5f;
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
         rb.rotation += rotation;
 
         // Limitar la velocidad angular
-        rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, -maxAngularVelocity, maxAngularVelocity);
+        rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, -maxangularVelocity, maxangularVelocity);
 
         Vector2 thrustDirection = transform.up;
         float thrust = thrustForce * thrustInput;
