@@ -13000,6 +13000,12 @@ PrefabInstance:
       propertyPath: textResult
       value: 
       objectReference: {fileID: 1829706829}
+    - target: {fileID: 6288858454872990112, guid: 23beed82d0616c7479d94dc06d658053, type: 3}
+      propertyPath: m_text
+      value: 'Oxigen
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 6288858455261019898, guid: 23beed82d0616c7479d94dc06d658053, type: 3}
       propertyPath: m_Name
       value: CanvasFinish

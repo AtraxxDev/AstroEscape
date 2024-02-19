@@ -283,10 +283,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d52a8605b7842d42aaecb2c5712c14a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationalSpeed: 0.5
+  rotationalSpeed: 0.65
   maxangularVelocity: 4
-  thrustForce: 0.5
-  turboMultiplier: 5
+  thrustForce: 0.125
+  turboMultiplier: 30
   brakeForce: 0.5
 --- !u!114 &855590070
 MonoBehaviour:
@@ -381,7 +381,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   timerLinearImage: {fileID: 0}
-  timeRemaining: 2400
+  timeRemaining: 6000
   oxygenRecovery: 100
   finalPanel: {fileID: 0}
   changeSceneButton: {fileID: 0}

@@ -9,7 +9,7 @@ public class Oxygen : MonoBehaviour
     public List<TMP_Text> oxygenTexts;
     public Image timerLinearImage;
     public float timeRemaining;
-    private float maxTime = 120f;
+    private float maxTime = 300f;
     public float oxygenRecovery = 15f;
     public GameObject finalPanel;
     public GameObject changeSceneButton;
