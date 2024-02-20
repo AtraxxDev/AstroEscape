@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 public class Dissapear : MonoBehaviour
 {
-    public int limit = 500;
+    [SerializeField] private int _limit = 500;
     public GameObject deactivateObj;
 
     void Start()
@@ -14,7 +14,7 @@ public class Dissapear : MonoBehaviour
         int resultadoTextValor = PlayerPrefs.GetInt("ResultadoTextValor", 0);
 
         // Verificar si el valor es mayor a 500 y desactivar el objeto
-        if (resultadoTextValor > limit)
+        if (resultadoTextValor > _limit)
         {
             if (deactivateObj != null)
             {

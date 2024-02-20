@@ -5078,8 +5078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f95953b1905096041a7c01a275d5fd19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonPlay: {fileID: 301458423}
-  MusicBG: {fileID: 67304747}
+  _buttonPlay: {fileID: 301458423}
+  _musicBG: {fileID: 67304747}
 --- !u!1 &1531469572
 GameObject:
   m_ObjectHideFlags: 0

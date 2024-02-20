@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneChangeTrue : MonoBehaviour
 {
-    public AudioSource buttonPlay;
-    public AudioSource MusicBG;
+    [SerializeField] private AudioSource _buttonPlay;
+    [SerializeField] private AudioSource _musicBG;
     public void StartGame()
     {
         StartCoroutine(StartG());
@@ -24,14 +24,14 @@ public class SceneChangeTrue : MonoBehaviour
 
     IEnumerator StartG()
     {
-        MusicBG.Stop();
+        _musicBG.Stop();
 
-        if (buttonPlay != null)
+        if (_buttonPlay != null)
         {
-            buttonPlay.Play();
+            _buttonPlay.Play();
         }
 
-        yield return new WaitForSeconds(buttonPlay.clip.length);
+        yield return new WaitForSeconds(_buttonPlay.clip.length);
         SceneManager.LoadScene("LevelSelect");
     }
 
