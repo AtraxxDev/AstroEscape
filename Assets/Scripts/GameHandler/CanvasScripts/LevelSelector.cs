@@ -96,7 +96,7 @@ public class LevelSelector : MonoBehaviour
                 break;
 
             case 5:
-                SceneManager.LoadScene("Level 5");
+                SceneManager.LoadScene("Level5");
                 break;
 
             default:

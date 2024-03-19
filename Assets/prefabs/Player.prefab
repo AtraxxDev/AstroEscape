@@ -283,10 +283,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d52a8605b7842d42aaecb2c5712c14a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationalSpeed: 0.65
-  maxangularVelocity: 4
-  thrustForce: 0.125
-  turboMultiplier: 30
+  rotationalSpeed: 1
+  maxangularVelocity: 20
+  thrustForce: 3
+  turboMultiplier: 1.5
   brakeForce: 0.5
 --- !u!114 &855590070
 MonoBehaviour:

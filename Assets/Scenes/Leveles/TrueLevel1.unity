@@ -9243,8 +9243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f95953b1905096041a7c01a275d5fd19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonPlay: {fileID: 0}
-  MusicBG: {fileID: 5513708382697204752}
+  _buttonPlay: {fileID: 0}
+  _musicBG: {fileID: 0}
 --- !u!4 &1311334985
 Transform:
   m_ObjectHideFlags: 0
@@ -15217,6 +15217,14 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 4343505757315549008, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: rotationalSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343505757315549008, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
+      propertyPath: turboMultiplier
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4343505757315549009, guid: 2cb45abb2f681ca40b192610f7c05dc6, type: 3}
       propertyPath: m_Name
       value: Player
@@ -15336,11 +15344,6 @@ PrefabInstance:
 --- !u!4 &5513708382697204751 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5513708382181516254, guid: 77ce7dad328f4dc49be2d5c7abec2db6, type: 3}
-  m_PrefabInstance: {fileID: 5513708382697204750}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &5513708382697204752 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5513708382181516225, guid: 77ce7dad328f4dc49be2d5c7abec2db6, type: 3}
   m_PrefabInstance: {fileID: 5513708382697204750}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6954165861613671683
