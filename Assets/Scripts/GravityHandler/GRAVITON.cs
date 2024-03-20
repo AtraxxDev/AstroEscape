@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class GRAVITON : MonoBehaviour
@@ -18,14 +17,17 @@ public class GRAVITON : MonoBehaviour
         {
             if (value == true)
             {
-                if (!pG.attractees.Contains(this.GetComponent<Rigidbody2D>()))
+                if (pG != null && !pG.attractees.Contains(this.GetComponent<Rigidbody2D>()))
                 {
                     pG.attractees.Add(rB);
                 }
             }
             else if (value == false)
             {
-                pG.attractees.Remove(rB);
+                if (pG != null)
+                {
+                    pG.attractees.Remove(rB);
+                }
             }
             isAttractee = value;
         }
@@ -41,12 +43,17 @@ public class GRAVITON : MonoBehaviour
         {
             if (value == true)
             {
-                if (!pG.attractors.Contains(this.GetComponent<Rigidbody2D>()))
+                if (pG != null && !pG.attractors.Contains(this.GetComponent<Rigidbody2D>()))
+                {
                     pG.attractors.Add(rB);
+                }
             }
             else if (value == false)
             {
-                pG.attractors.Remove(rB);
+                if (pG != null)
+                {
+                    pG.attractors.Remove(rB);
+                }
             }
             isAttractive = value;
         }
@@ -81,8 +88,11 @@ public class GRAVITON : MonoBehaviour
 
     private void OnDisable()
     {
-        pG.attractors.Remove(rB);
-        pG.attractees.Remove(rB);
+        if (pG != null)
+        {
+            pG.attractors.Remove(rB);
+            pG.attractees.Remove(rB);
+        }
     }
 
     void ApplyVelocity(Vector3 velocity)
@@ -93,14 +103,13 @@ public class GRAVITON : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Planet"))
-        {                       
-            if(other.TryGetComponent<PlanetGravity>(out PlanetGravity planetG))
+        {
+            if (other.TryGetComponent<PlanetGravity>(out PlanetGravity planetG))
             {
                 pG = planetG;
                 isAttractee = true;
-                
             }
-            if (!pG.attractees.Contains(this.GetComponent<Rigidbody2D>()))
+            if (pG != null && !pG.attractees.Contains(this.GetComponent<Rigidbody2D>()))
             {
                 pG.attractees.Add(rB);
             }
@@ -112,9 +121,11 @@ public class GRAVITON : MonoBehaviour
         if (other.CompareTag("Planet"))
         {
             isAttractee = false;
-            pG.attractees.Remove(rB);
+            if (pG != null)
+            {
+                pG.attractees.Remove(rB);
+            }
             pG = null;
         }
     }
-
 }
